@@ -179,7 +179,7 @@ const CreatedOrUpdatedInstanceModal = (
       })}
       maskClosable={false}
       onCancel={onCancel}
-      visible={visible}
+      open={visible}
       footer={[
         <Button key="back" onClick={onCancel}>
           {i18n.formatMessage({ id: "button.cancel" })}

@@ -90,7 +90,7 @@ const CreatedAndEditorWorkflow = () => {
         id: `bigdata.workflow.rightMenu.${!isEditWorkflow ? "add" : "update"}`,
       })}
       width={700}
-      visible={visibleWorkflowEditModal}
+      open={visibleWorkflowEditModal}
       onCancel={handleCancel}
       onOk={onOk}
       confirmLoading={addWorkflow.loading || updateWorkflow.loading}

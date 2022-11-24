@@ -62,7 +62,7 @@ const EditDatabaseModel = (props: { onGetList: () => void }) => {
   return (
     <Modal
       title={i18n.formatMessage({ id: "log.editDatabaseModel.title" })}
-      visible={isEditDatabase}
+      open={isEditDatabase}
       onCancel={() => onChangeIsEditDatabase(false)}
       onOk={() => editDatabaseFormRef.current?.submit()}
       width={"45%"}

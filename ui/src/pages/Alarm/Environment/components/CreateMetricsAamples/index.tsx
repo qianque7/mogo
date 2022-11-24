@@ -56,7 +56,7 @@ const CreateMetricsAamples = (props: {
           name: "metrics-samples",
         }
       )}
-      visible={visible}
+      open={visible}
       onOk={() => metricsAamplesRef?.current?.submit()}
       onCancel={() => onChangeVisible(false)}
     >

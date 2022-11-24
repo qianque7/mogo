@@ -3,7 +3,7 @@ import {
   LogoutOutlined,
   UpCircleOutlined,
 } from "@ant-design/icons";
-import { Avatar, Menu, Spin } from "antd";
+import { Avatar, Spin } from "antd";
 import HeaderDropdown from "../HeaderDropdown";
 import styles from "./index.less";
 import { useModel } from "@@/plugin-model/useModel";
@@ -46,112 +46,61 @@ const AvatarDropdown = () => {
     [currentUser]
   );
 
-  // const items: any[] = useMemo(() => {
-  //   let list: any[] = [];
-  //   hiddenPassword &&
-  //     list.push({
-  //       icon: <IconFont type={"icon-reset-password"} />,
-  //       key: "resetPassword",
-  //       onClick: handleResetPassword,
-  //       label: i18n.formatMessage({
-  //         id: "navbar.changePassword",
-  //       }),
-  //     });
-  //   list.push(
-  //     ...[
-  //       {
-  //         icon: <UpCircleOutlined />,
-  //         key: "upgrade",
-  //         onClick: handleUpgrade,
-  //         label: i18n.formatMessage({
-  //           id: "navbar.upgrade",
-  //         }),
-  //       },
-  //       {
-  //         icon: <FileTextOutlined />,
-  //         key: "interfaceDoc",
-  //         label: (
-  //           <a
-  //             href={process.env.PUBLIC_PATH + `api/v2/swagger/index.html`}
-  //             target="_blank"
-  //           >
-  //             {i18n.formatMessage({
-  //               id: "navbar.interfaceDoc",
-  //             })}
-  //           </a>
-  //         ),
-  //       },
-  //     ]
-  //   );
+  const items: any[] = useMemo(() => {
+    let list: any[] = [];
+    hiddenPassword &&
+      list.push({
+        icon: <IconFont type={"icon-reset-password"} />,
+        key: "resetPassword",
+        onClick: handleResetPassword,
+        label: i18n.formatMessage({
+          id: "navbar.changePassword",
+        }),
+      });
+    list.push(
+      ...[
+        {
+          icon: <UpCircleOutlined />,
+          key: "upgrade",
+          onClick: handleUpgrade,
+          label: i18n.formatMessage({
+            id: "navbar.upgrade",
+          }),
+        },
+        {
+          icon: <FileTextOutlined />,
+          key: "interfaceDoc",
+          label: (
+            <a
+              href={process.env.PUBLIC_PATH + `api/v2/swagger/index.html`}
+              target="_blank"
+            >
+              {i18n.formatMessage({
+                id: "navbar.interfaceDoc",
+              })}
+            </a>
+          ),
+        },
+      ]
+    );
 
-  //   hiddenLogOut &&
-  //     list.push({
-  //       icon: <LogoutOutlined />,
-  //       key: "logout",
-  //       onClick: handleLogout,
-  //       label: i18n.formatMessage({
-  //         id: "navbar.logOut",
-  //       }),
-  //     });
+    hiddenLogOut &&
+      list.push({
+        icon: <LogoutOutlined />,
+        key: "logout",
+        onClick: handleLogout,
+        label: i18n.formatMessage({
+          id: "navbar.logOut",
+        }),
+      });
 
-  //   return list;
-  // }, [hiddenPassword, hiddenLogOut]);
+    return list;
+  }, [hiddenPassword, hiddenLogOut]);
 
-  // const menuHeaderDropdown = (
-  //   <Menu className={styles.menu} selectedKeys={[]} items={items}>
-  //     {/* <ChangePasswordModal /> */}
-  //   </Menu>
-  // );
-  const menuHeaderDropdown = (
-    <Menu className={styles.menu} selectedKeys={[]}>
-      {hiddenPassword && (
-        <Menu.Item
-          icon={<IconFont type={"icon-reset-password"} />}
-          key="resetPassword"
-          onClick={() => handleResetPassword()}
-        >
-          {i18n.formatMessage({
-            id: "navbar.changePassword",
-          })}
-        </Menu.Item>
-      )}
-      <Menu.Item
-        icon={<UpCircleOutlined />}
-        key="upgrade"
-        onClick={() => handleUpgrade()}
-      >
-        {i18n.formatMessage({
-          id: "navbar.upgrade",
-        })}
-      </Menu.Item>
-      <Menu.Item icon={<FileTextOutlined />} key="interfaceDoc">
-        <a
-          href={process.env.PUBLIC_PATH + `api/v2/swagger/index.html`}
-          target="_blank"
-        >
-          {i18n.formatMessage({
-            id: "navbar.interfaceDoc",
-          })}
-        </a>
-      </Menu.Item>
-      {hiddenLogOut && (
-        <Menu.Item
-          icon={<LogoutOutlined />}
-          key="logout"
-          onClick={() => handleLogout()}
-        >
-          {i18n.formatMessage({
-            id: "navbar.logOut",
-          })}
-        </Menu.Item>
-      )}
-      <ChangePasswordModal />
-    </Menu>
-  );
   if (currentUser && currentUser.id === 0) return <></>;
 
   return currentUser && currentUser.nickname ? (
-    <HeaderDropdown overlay={menuHeaderDropdown}>
+    <HeaderDropdown menu={{ items: items }}>
       <span className={`${styles.action} ${styles.account}`}>
         <Avatar
           size="small"
@@ -162,7 +111,7 @@ const AvatarDropdown = () => {
           {currentUser?.nickname}
         </Avatar>
         <span className={`${styles.name} anticon`}>{currentUser.nickname}</span>
-        {/* <ChangePasswordModal /> */}
+        <ChangePasswordModal />
       </span>
     </HeaderDropdown>
   ) : (

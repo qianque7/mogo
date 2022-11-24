@@ -161,7 +161,7 @@ const VersionHistory = (props: {
       })}
       placement="right"
       onClose={onClose}
-      visible={visible}
+      open={visible}
       width={"50vw"}
     >
       <Table
@@ -192,7 +192,7 @@ const VersionHistory = (props: {
         })}
         width={"50vw"}
         onClose={() => setVisibleQuery(false)}
-        visible={visibleQuery}
+        open={visibleQuery}
       >
         <MonacoEditor
           height={"100%"}

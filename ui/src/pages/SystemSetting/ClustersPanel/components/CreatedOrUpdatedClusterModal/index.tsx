@@ -65,7 +65,7 @@ const CreatedOrUpdatedClusterModal = (
       title={i18n.formatMessage({
         id: `cluster.form.title.${isEditor ? "edit" : "created"}`,
       })}
-      visible={visible}
+      open={visible}
       onCancel={onCancel}
       width={"70vw"}
     >

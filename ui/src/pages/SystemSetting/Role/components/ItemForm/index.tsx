@@ -69,7 +69,7 @@ const Index: React.FC<ListFormProps> = (props) => {
     <Modal
       destroyOnClose
       title={formTitle}
-      visible={modalVisible}
+      open={modalVisible}
       onCancel={() => onCancel()}
       {...modalFooter}
     >

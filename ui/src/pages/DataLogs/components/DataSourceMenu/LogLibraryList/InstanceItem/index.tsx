@@ -1,4 +1,4 @@
-import { Dropdown, Menu, Tooltip } from "antd";
+import { Dropdown, Tooltip } from "antd";
 import { useIntl, useModel } from "umi";
 import logLibraryListStyles from "@/pages/DataLogs/components/DataSourceMenu/LogLibraryList/index.less";
 import { PlusSquareOutlined } from "@ant-design/icons";
@@ -59,10 +59,8 @@ const InstanceItem = (props: { instanceItem: any }) => {
     },
   ];
 
-  const menu = <Menu items={menuList} />;
-
   return (
-    <Dropdown overlay={menu} trigger={["contextMenu"]}>
+    <Dropdown menu={{ items: menuList }} trigger={["contextMenu"]}>
       <Tooltip
         title={tooltipTitle}
         placement="right"

@@ -1,20 +1,19 @@
-import {Menu, message} from "antd";
+import { message } from "antd";
 import {
   OfflineRightMenuClickSourceEnums,
   PrimaryEnums,
   SecondaryEnums,
   TertiaryEnums,
 } from "@/pages/DataAnalysis/service/enums";
-import {useCallback, useEffect, useMemo, useRef} from "react";
-import {ItemType} from "antd/es/menu/hooks/useItems";
-import {AppstoreAddOutlined, EditOutlined} from "@ant-design/icons";
+import { useCallback, useEffect, useMemo, useRef } from "react";
+import { ItemType } from "antd/es/menu/hooks/useItems";
+import { AppstoreAddOutlined, EditOutlined } from "@ant-design/icons";
 import IconFont from "@/components/IconFont";
-import {useModel} from "@@/plugin-model/useModel";
-import {useIntl} from "umi";
+import { useModel } from "@@/plugin-model/useModel";
+import { useIntl } from "umi";
 import deletedModal from "@/components/DeletedModal";
 import lodash from "lodash";
-// import SVGIcon, { SVGTypeEnums } from "@/components/SVGIcon";
-import useLocalStorages, {LocalModuleType} from "@/hooks/useLocalStorages";
+import useLocalStorages, { LocalModuleType } from "@/hooks/useLocalStorages";
 import useUrlState from "@ahooksjs/use-url-state";
 
 export interface RightMenuProps {
@@ -22,7 +21,7 @@ export interface RightMenuProps {
   currentNode?: any;
   handleCloseNodeModal?: (params?: any) => void;
 }
-const RightMenu = (props: RightMenuProps) => {
+const useRightMenu = (props: RightMenuProps) => {
   const i18n = useIntl();
   const { clickSource, currentNode, handleCloseNodeModal } = props;
   const { onSetLocalData } = useLocalStorages();
@@ -47,18 +46,12 @@ const RightMenu = (props: RightMenuProps) => {
     setCurrentNode,
     doDeletedNode,
     doDeleteFolder,
-    // setSelectNode,
   } = manageNode;
 
   const handleClickAddWorkflow = useCallback(
     () => setVisibleWorkflowEditModal(true),
     []
   );
-
-  // const handleClickBoard = useCallback(() => {
-  //   setSelectNode(currentNode.board);
-  //   selectNodeRef.current = currentNode.board;
-  // }, [currentNode]);
 
   useEffect(() => {
     currentNode?.board && (selectNodeRef.current = currentNode.board);
@@ -103,7 +96,6 @@ const RightMenu = (props: RightMenuProps) => {
               return;
             }
             if (selectNodeRef.current?.workflowId === currentNode?.id) {
-              // setSelectNode(undefined);
               onSetLocalData(null, LocalModuleType.dataAnalysisOpenNodeId);
               setUrlState({ nodeId: undefined });
             }
@@ -386,24 +378,32 @@ const RightMenu = (props: RightMenuProps) => {
   ];
 
   const nodeMenu: ItemType[] = [
-    { label:  i18n.formatMessage({
+    {
+      label: i18n.formatMessage({
         id: "edit",
-      }), key: "update-node", onClick: handleClickUpdateNode },
-    { label:  i18n.formatMessage({
+      }),
+      key: "update-node",
+      onClick: handleClickUpdateNode,
+    },
+    {
+      label: i18n.formatMessage({
         id: "delete",
-      }), key: "delete-node", onClick: handleClickDeleteNode },
+      }),
+      key: "delete-node",
+      onClick: handleClickDeleteNode,
+    },
   ];
 
   const folderMenu: ItemType[] = [
     {
-      label:  i18n.formatMessage({
+      label: i18n.formatMessage({
         id: "edit",
       }),
       key: "update-folder",
       onClick: () => handleClickUpdateFolder(),
     },
     {
-      label:  i18n.formatMessage({
+      label: i18n.formatMessage({
         id: "delete",
       }),
       key: "delete-folder",
@@ -437,6 +437,6 @@ const RightMenu = (props: RightMenuProps) => {
     }
   }, [currentNode, clickSource]);
 
-  return <Menu items={menuItems} />;
+  return { items: menuItems };
 };
-export default RightMenu;
+export default useRightMenu;

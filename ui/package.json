@@ -60,7 +60,7 @@
     "@types/styled-components": "^5.1.25",
     "@umijs/route-utils": "^1.0.36",
     "ahooks": "^3.0.5",
-    "antd": "^4.14.0",
+    "antd": "4.24.3",
     "classnames": "^2.2.6",
     "codemirror": "^5.59.1",
     "crypto-js": "^4.1.1",

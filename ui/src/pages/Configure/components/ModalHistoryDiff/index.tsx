@@ -24,7 +24,7 @@ const ModalHistoryDiff = () => {
     <CustomModal
       title={i18n.formatMessage({ id: "config.historyDiff.title" })}
       width={"90vw"}
-      visible={visibleHistoryDiff}
+      open={visibleHistoryDiff}
       onCancel={() => onChangeVisibleHistoryDiff(false)}
     >
       <MonacoDiffEditor

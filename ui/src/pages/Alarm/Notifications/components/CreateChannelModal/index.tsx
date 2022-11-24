@@ -60,7 +60,7 @@ const CreateChannelModal = ({ loadList }: CreateChannelProps) => {
   return (
     <Modal
       title={i18n.formatMessage({ id: "alarm.notify.modal.created" })}
-      visible={visibleCreate}
+      open={visibleCreate}
       width={700}
       onCancel={onCancel}
       footer={[

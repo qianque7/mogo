@@ -108,11 +108,10 @@ const DatabaseViewsDraw = (props: DatabaseViewsDrawProps) => {
       title={i18n.formatMessage({ id: "datasource.view.draw" })}
       placement="right"
       closable
-      getContainer={false}
       width={"35vw"}
       bodyStyle={{ padding: 10 }}
       headerStyle={{ padding: 10 }}
-      visible={viewsVisibleDraw}
+      open={viewsVisibleDraw}
       onClose={() => onChangeViewsVisibleDraw(false)}
     >
       <div className={classNames(viewDrawStyles.drawCreatedButton)}>

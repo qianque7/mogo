@@ -7,7 +7,6 @@ import { TimeRangeType } from "@/config/config";
 import { DarkTimeContext } from "@/pages/DataLogs/components/DateTimeSelected";
 import { useContext, useMemo } from "react";
 import { PaneType } from "@/models/datalogs/types";
-const { TabPane } = Tabs;
 
 const DateTimeSelectedCard = (props: {
   onChangeVisble: (flag: boolean) => void;
@@ -32,6 +31,22 @@ const DateTimeSelectedCard = (props: {
     onChangeActiveTabKey(key);
     onChangeCurrentLogPane({ ...(oldPane as PaneType), activeTabKey: key });
   };
+
+  const items = [
+    {
+      key: TimeRangeType.Relative,
+      forceRender: true,
+      label: TabName[TimeRangeType.Relative],
+      children: <RelativeTime onChangeVisble={onChangeVisble} />,
+    },
+    {
+      key: TimeRangeType.Custom,
+      forceRender: true,
+      label: TabName[TimeRangeType.Custom],
+      children: <CustomTimeInterval />,
+    },
+  ];
+
   return (
     <div className={darkTimeStyles.darkTimeSelectCard}>
       <Tabs
@@ -40,22 +55,8 @@ const DateTimeSelectedCard = (props: {
         size="small"
         onTabClick={onChangeActiveTab}
         defaultActiveKey={activeTabKey}
-      >
-        <TabPane
-          forceRender
-          tab={TabName[TimeRangeType.Relative]}
-          key={TimeRangeType.Relative}
-        >
-          <RelativeTime onChangeVisble={onChangeVisble} />
-        </TabPane>
-        <TabPane
-          forceRender
-          tab={TabName[TimeRangeType.Custom]}
-          key={TimeRangeType.Custom}
-        >
-          <CustomTimeInterval />
-        </TabPane>
-      </Tabs>
+        items={items}
+      />
     </div>
   );
 };

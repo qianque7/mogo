@@ -87,7 +87,7 @@ const AppRoleAssignListForm = (props: AppRolesProps) => {
         onChangeDrawerVisible(false);
       }}
       bodyStyle={{ padding: 0 }}
-      visible={drawerVisible}
+      open={drawerVisible}
       width={"90%"}
       wrapClassName={styles.roleModal}
     >

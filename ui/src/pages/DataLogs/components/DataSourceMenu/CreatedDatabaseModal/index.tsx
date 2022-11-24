@@ -83,7 +83,7 @@ const CreatedDatabaseModal = (props: { onGetList: any }) => {
       title={i18n.formatMessage({
         id: "database.form.title",
       })}
-      visible={visibleCreatedDatabaseModal}
+      open={visibleCreatedDatabaseModal}
       onCancel={onCancel}
       width={"45%"}
     >

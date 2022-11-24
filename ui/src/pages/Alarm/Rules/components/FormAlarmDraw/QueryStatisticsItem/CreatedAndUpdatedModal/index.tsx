@@ -366,7 +366,7 @@ const CreatedAndUpdatedModal = ({
       title={i18n.formatMessage({
         id: "alarm.rules.form.inspectionStatistics",
       })}
-      visible={visible}
+      open={visible}
       width={"60%"}
       onOk={onSubmit}
       onCancel={onCancel}

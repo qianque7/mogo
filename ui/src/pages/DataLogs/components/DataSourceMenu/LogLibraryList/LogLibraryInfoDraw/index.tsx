@@ -137,7 +137,6 @@ const LogLibraryInfoDraw = (props: LogLibraryInfoDrawProps) => {
       title={`${libraryInfo.name}`}
       placement="right"
       closable
-      getContainer={false}
       width={"60vw"}
       bodyStyle={{
         margin: 10,
@@ -146,7 +145,7 @@ const LogLibraryInfoDraw = (props: LogLibraryInfoDrawProps) => {
         flexDirection: "column",
       }}
       headerStyle={{ padding: 10 }}
-      visible={logLibraryInfoDrawVisible}
+      open={logLibraryInfoDrawVisible}
       onClose={() => onChangeLogLibraryInfoDrawVisible(false)}
     >
       <div className={infoStyles.infoMain}>

@@ -150,7 +150,7 @@ const CreateAndUpdateNode = () => {
               id: "bigdata.components.FolderTree.crateNode.updateTitle",
             })
       }
-      visible={visibleNode}
+      open={visibleNode}
       bodyStyle={{ paddingBottom: 0 }}
       onCancel={() => changeVisibleNode(false)}
       onOk={() => folderForm.current?.submit()}
@@ -184,9 +184,13 @@ const CreateAndUpdateNode = () => {
             )}
           </Select>
         </Form.Item>
-        <Form.Item name={"tertiary"} label={i18n.formatMessage({
-          id: "log.editDatabaseModel.label.datasourceType",
-        })} required>
+        <Form.Item
+          name={"tertiary"}
+          label={i18n.formatMessage({
+            id: "log.editDatabaseModel.label.datasourceType",
+          })}
+          required
+        >
           <Select
             placeholder={i18n.formatMessage({
               id: "bigdata.components.FolderTree.crateNode.tertiarySelect.placeholder",
@@ -236,18 +240,25 @@ const CreateAndUpdateNode = () => {
             return <></>;
           }}
         </Form.Item>
-        <Form.Item name={"name"} label={i18n.formatMessage({
-          id: "name",
-        })} required>
+        <Form.Item
+          name={"name"}
+          label={i18n.formatMessage({
+            id: "name",
+          })}
+          required
+        >
           <Input
             placeholder={i18n.formatMessage({
               id: "bigdata.components.FolderTree.crateNode.nodeName.placeholder",
             })}
           />
         </Form.Item>
-        <Form.Item name={"desc"} label={i18n.formatMessage({
-          id: "description",
-        })}>
+        <Form.Item
+          name={"desc"}
+          label={i18n.formatMessage({
+            id: "description",
+          })}
+        >
           <Input
             placeholder={i18n.formatMessage({
               id: "bigdata.components.FolderTree.crateNode.nodeDesc.placeholder",

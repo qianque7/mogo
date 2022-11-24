@@ -41,7 +41,7 @@ const RealtimeDiff = (props: RealtimeDiffProps) => {
 
   return (
     <CustomModal
-      visible={visible}
+      open={visible}
       title={i18n.formatMessage({ id: "config.diff.title" })}
       width="90%"
       footer={

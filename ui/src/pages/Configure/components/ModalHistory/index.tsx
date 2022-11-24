@@ -47,7 +47,7 @@ const ModalHistory = () => {
     <CustomModal
       title={i18n.formatMessage({ id: "config.files.history" })}
       width={900}
-      visible={visibleHistory}
+      open={visibleHistory}
       maskClosable={false}
       onCancel={() => onChangeVisibleHistory(false)}
     >

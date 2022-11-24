@@ -128,7 +128,7 @@ const EditEnvironmentModal = (props: EditEnvironmentModalProps) => {
   return (
     <Modal
       title={i18n.formatMessage({ id: "alarm.environment.form.title" })}
-      visible={visible}
+      open={visible}
       width={800}
       onCancel={() => onChangeVisible(false)}
       onOk={() => formRef.current?.submit()}

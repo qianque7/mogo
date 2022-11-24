@@ -98,7 +98,7 @@ const ModalCreatedAndUpdatedView = ({
         }`,
       })}
       width={800}
-      visible={viewVisibleModal}
+      open={viewVisibleModal}
       onCancel={() => onChangeViewVisibleModal(false)}
       footer={
         <Button

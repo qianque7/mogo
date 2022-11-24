@@ -53,7 +53,7 @@ const ModalCreatedConfig = () => {
   return (
     <CustomModal
       title={i18n.formatMessage({ id: "config.createdConfig.title" })}
-      visible={visibleCreate}
+      open={visibleCreate}
       onCancel={onCancel}
     >
       <Form

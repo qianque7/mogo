@@ -82,7 +82,7 @@ const EditLogLibraryModal = (props: { onGetList: any }) => {
   return (
     <Modal
       title={i18n.formatMessage({ id: "datasource.tooltip.icon.edit" })}
-      visible={isModifyLog}
+      open={isModifyLog}
       onCancel={() => onChangeIsModifyLog(false)}
       onOk={() => editDatabaseFormRef.current?.submit()}
       width={"60%"}

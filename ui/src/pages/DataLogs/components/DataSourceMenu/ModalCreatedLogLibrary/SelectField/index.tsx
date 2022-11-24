@@ -77,7 +77,7 @@ const SelectField = (props: SelectFieldType) => {
       title={i18n.formatMessage({
         id: "datasource.logLibrary.selectField.title",
       })}
-      visible={visible}
+      open={visible}
       onCancel={onCancel}
       width={700}
       footer={[

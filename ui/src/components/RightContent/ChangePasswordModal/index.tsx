@@ -73,7 +73,7 @@ const ChangePasswordModal = () => {
       width={700}
       confirmLoading={doChangePassword.loading}
       title={i18n.formatMessage({ id: "password.title" })}
-      visible={visibleChangePassword}
+      open={visibleChangePassword}
       bodyStyle={{ paddingBottom: 0 }}
       onCancel={handleCancel}
       onOk={() => resetFormRef.current?.submit()}
@@ -154,9 +154,14 @@ const ChangePasswordModal = () => {
             }
             maxLength={32}
             minLength={5}
-            placeholder={`${i18n.formatMessage({
-              id: "password.placeholder.old",
-            })}`}
+            placeholder={`${i18n.formatMessage(
+              {
+                id: "input.placeholder",
+              },
+              {
+                name: i18n.formatMessage({ id: "password.change.new" }),
+              }
+            )}`}
             iconRender={(visible) =>
               visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />
             }
@@ -196,9 +201,14 @@ const ChangePasswordModal = () => {
             onChange={() => resetFormRef.current?.validateFields(["password"])}
             maxLength={32}
             minLength={5}
-            placeholder={`${i18n.formatMessage({
-              id: "password.placeholder.old",
-            })}`}
+            placeholder={`${i18n.formatMessage(
+              {
+                id: "input.placeholder",
+              },
+              {
+                name: i18n.formatMessage({ id: "password.change.confirm" }),
+              }
+            )}`}
             iconRender={(visible) =>
               visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />
             }

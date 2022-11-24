@@ -91,7 +91,7 @@ const Publish = () => {
               publishStyles.formSelectInput,
               publishStyles.darkSelect
             )}
-            dropdownClassName={publishStyles.darkSelectDropdown}
+            popupClassName={publishStyles.darkSelectDropdown}
             placeholder={`${i18n.formatMessage({
               id: "config.publish.form.placeholder.configure",
             })}`}
@@ -117,7 +117,7 @@ const Publish = () => {
               publishStyles.formSelectInput,
               publishStyles.darkSelect
             )}
-            dropdownClassName={publishStyles.darkSelectDropdown}
+            popupClassName={publishStyles.darkSelectDropdown}
             optionLabelProp="label"
           >
             {doGetHistoryConfiguration.data?.map((config) => (

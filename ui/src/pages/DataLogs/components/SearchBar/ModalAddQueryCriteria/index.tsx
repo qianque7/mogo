@@ -24,7 +24,7 @@ const ModalAddQueryCriteria = (props: ModalAddQueryCriteriaProps) => {
   return (
     <CustomModal
       title={i18n.formatMessage({ id: "log.search.icon.quickSearch" })}
-      visible={visible}
+      open={visible}
       onCancel={onCancel}
       footer={
         <Button

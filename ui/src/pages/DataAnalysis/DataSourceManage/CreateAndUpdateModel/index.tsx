@@ -93,7 +93,7 @@ const CreateAndUpdateModel = () => {
               id: "bigdata.dataSourceManage.searchBar.dataSourceType.create",
             })
       }
-      visible={visibleDataSource}
+      open={visibleDataSource}
       bodyStyle={{ paddingBottom: 0 }}
       onCancel={() => changeVisibleDataSource(false)}
       onOk={() => DataSourceForm.current?.submit()}

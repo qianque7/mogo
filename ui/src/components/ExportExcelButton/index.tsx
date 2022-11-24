@@ -70,7 +70,7 @@ const ExportExcelButton = ({
       {isModalVisible ? (
         <Modal
           title={i18n.formatMessage({ id: "export" })}
-          visible={isModalVisible}
+          open={isModalVisible}
           onOk={handleOK}
           onCancel={() => {
             setIsModalVisible(false);

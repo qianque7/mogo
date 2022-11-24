@@ -148,10 +148,9 @@ const FormAlarmDraw = () => {
       closable
       destroyOnClose
       title={i18n.formatMessage({ id: "alarm.rules.form.title" })}
-      visible={alarmDraw.visibleDraw}
+      open={alarmDraw.visibleDraw}
       placement="left"
       onClose={handleClose}
-      getContainer={false}
       width={"55%"}
       bodyStyle={{ padding: 10 }}
       headerStyle={{ padding: 10 }}

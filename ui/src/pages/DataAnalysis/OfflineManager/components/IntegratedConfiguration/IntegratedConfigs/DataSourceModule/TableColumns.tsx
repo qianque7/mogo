@@ -57,7 +57,7 @@ const TableColumns = ({
   return (
     <CustomModal
       title={title}
-      visible={openVisible}
+      open={openVisible}
       onCancel={cancelModal}
       width={700}
       footer={[

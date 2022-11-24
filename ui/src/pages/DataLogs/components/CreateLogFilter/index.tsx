@@ -110,7 +110,7 @@ const CreateLogFilter = ({ tid }: { tid: number }) => {
           ? i18n.formatMessage({ id: "log.filter.edit.title" })
           : i18n.formatMessage({ id: "log.filter.add.title" })
       }
-      visible={visibleLogFilter}
+      open={visibleLogFilter}
       onOk={() => formFilterRef.current?.submit()}
       onCancel={() => onChangeVisibleLogFilter(false)}
       width={800}

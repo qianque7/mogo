@@ -1,4 +1,4 @@
-import { Dropdown, Menu, message, Popconfirm } from "antd";
+import { Dropdown, message, Popconfirm } from "antd";
 import { useState } from "react";
 import { useModel, useIntl } from "umi";
 import { FolderEnums } from "@/pages/DataAnalysis/service/enums";
@@ -27,6 +27,17 @@ const FolderTitle = (props: { id: number; title: any }) => {
       label: i18n.formatMessage({
         id: "bigdata.components.RightMenu.Scheduling.Modify",
       }),
+      onClick: () => {
+        if (currentFolder.nodeType == FolderEnums.node) {
+          changeIsUpdateNode(true);
+          changeVisibleNode(true);
+          setVisibleDropdown(false);
+          return;
+        }
+        changeIsUpdateFolder(true);
+        changeVisibleFolder(true);
+        setVisibleDropdown(false);
+      },
     },
     // {
     //   key: "move",
@@ -63,31 +74,6 @@ const FolderTitle = (props: { id: number; title: any }) => {
     },
   ];
 
-  const handleRightClickMenuItem = (data: { key: string }) => {
-    const { key } = data;
-    switch (key) {
-      case "rename":
-        if (currentFolder.nodeType == FolderEnums.node) {
-          changeIsUpdateNode(true);
-          changeVisibleNode(true);
-          setVisibleDropdown(false);
-          return;
-        }
-        changeIsUpdateFolder(true);
-        changeVisibleFolder(true);
-        setVisibleDropdown(false);
-
-        break;
-      case "move":
-        break;
-      case "delete":
-        break;
-
-      default:
-        break;
-    }
-  };
-
   const handleDeleteFolder = () => {
     if (currentFolder.nodeType == FolderEnums.node) {
       doDeleteNode.run(id).then((res: any) => {
@@ -112,27 +98,16 @@ const FolderTitle = (props: { id: number; title: any }) => {
     });
   };
 
-  const rightClickMenu = (
-    <div
-      onClick={(e) => {
-        e.stopPropagation();
-      }}
-      style={{ borderRadius: "8px", overflow: "hidden" }}
-    >
-      <Menu items={rightClickMenuItem} onClick={handleRightClickMenuItem} />
-    </div>
-  );
-
   const handleContextMenu = () => {
     setVisibleDropdown(true);
   };
 
   return (
     <Dropdown
-      overlay={rightClickMenu}
+      menu={{ items: rightClickMenuItem }}
       trigger={["contextMenu"]}
-      visible={visibleDropdown}
-      onVisibleChange={(value: any) => {
+      open={visibleDropdown}
+      onOpenChange={(value: any) => {
         setVisibleDropdown(value);
         !value &&
           changeCurrentFolder({

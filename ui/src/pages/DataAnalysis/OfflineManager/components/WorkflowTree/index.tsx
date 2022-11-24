@@ -4,7 +4,7 @@ import classNames from "classnames";
 import { useModel } from "@@/plugin-model/useModel";
 import { useEffect, useRef } from "react";
 import { Dropdown } from "antd";
-import RightMenu from "@/pages/DataAnalysis/OfflineManager/components/WorkflowTree/RightMenu";
+import useRightMenu from "@/pages/DataAnalysis/OfflineManager/components/WorkflowTree/RightMenu";
 import { OfflineRightMenuClickSourceEnums } from "@/pages/DataAnalysis/service/enums";
 import CreatedAndEditorWorkflow from "@/pages/DataAnalysis/OfflineManager/components/WorkflowTree/CreatedAndEditorWorkflow";
 import { useIntl } from "umi";
@@ -15,6 +15,10 @@ const WorkflowTree = (props: {}) => {
   const { workflow, currentInstances } = useModel("dataAnalysis");
   const { isFold, setIsFold, getWorkflows, setWorkflowList } = workflow;
   const titleParentRef = useRef<HTMLDivElement>(null);
+
+  const { items } = useRightMenu({
+    clickSource: OfflineRightMenuClickSourceEnums.workflowHeader,
+  });
 
   useEffect(() => {
     if (!currentInstances) return;
@@ -37,11 +41,9 @@ const WorkflowTree = (props: {}) => {
       <div className={offlineStyles.header}>
         <div className={offlineStyles.title} ref={titleParentRef}>
           <Dropdown
-            overlay={
-              <RightMenu
-                clickSource={OfflineRightMenuClickSourceEnums.workflowHeader}
-              />
-            }
+            menu={{
+              items: items,
+            }}
             trigger={["contextMenu"]}
             getPopupContainer={() => titleParentRef.current!}
           >

@@ -97,7 +97,7 @@ const RoleModel = () => {
       }${i18n.formatMessage({
         id: "systemSetting.instancePanel.roleAssign.roleModel.role",
       })}`}
-      visible={roleModal}
+      open={roleModal}
       destroyOnClose={true}
       onCancel={resetRole}
       width={"60vw"}

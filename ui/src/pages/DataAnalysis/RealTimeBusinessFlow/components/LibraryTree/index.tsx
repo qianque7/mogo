@@ -50,7 +50,10 @@ const LibraryTree = (props: { setUtime: (num?: number) => void }) => {
     if (urlState?.dName && urlState?.tName && urlState?.iid) {
       doGetTables
         .run(parseInt(urlState?.iid), { database: urlState.dName })
-        .then((res) => setTables(res?.data ?? []));
+        .then((res: any) => {
+          if (res.code !== 0) return;
+          setTables(res?.data ?? []);
+        });
       form.setFieldsValue({
         databaseName: urlState.dName,
         tableName: urlState.tName,
@@ -89,7 +92,10 @@ const LibraryTree = (props: { setUtime: (num?: number) => void }) => {
                       if (databaseName) {
                         doGetTables
                           .run(currentInstances!, { database: databaseName })
-                          .then((res) => setTables(res?.data ?? []));
+                          .then((res: any) => {
+                            if (res.code !== 0) return;
+                            setTables(res?.data ?? []);
+                          });
                       }
                       form.resetFields(["tableName"]);
                     }}

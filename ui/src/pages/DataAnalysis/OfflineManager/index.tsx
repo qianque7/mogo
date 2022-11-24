@@ -12,8 +12,6 @@ import { PrimaryEnums, SecondaryEnums } from "../service/enums";
 import useLocalStorages, { LocalModuleType } from "@/hooks/useLocalStorages";
 import useUrlState from "@ahooksjs/use-url-state";
 
-const { TabPane } = Tabs;
-
 const OfflineManager = () => {
   const i18n = useIntl();
   const [urlState] = useUrlState();
@@ -166,6 +164,29 @@ const OfflineManager = () => {
     }
   }, [nodes, workflowList]);
 
+  const items = useMemo(() => {
+    let arr: any[] = [];
+
+    panes.map((pane: PaneItemType) => {
+      arr.push({
+        key: pane.key,
+        label: pane.title,
+        forceRender: true,
+        style: { background: "#fff", width: "100%", height: "100%" },
+        children: (
+          <TabPaneItem
+            id={parseInt(pane.key)}
+            node={pane.node}
+            parentId={pane.parentId}
+            currentOfflinePaneActiveKey={currentOfflinePaneActiveKey}
+          />
+        ),
+      });
+    });
+
+    return arr;
+  }, [panes, currentOfflinePaneActiveKey]);
+
   return (
     <div className={offlineStyles.offlineMain} style={{ background: "#fff" }}>
       <div className={offlineStyles.right}>
@@ -176,30 +197,13 @@ const OfflineManager = () => {
           <>
             <Tabs
               hideAdd
+              items={items}
               onChange={onChange}
               activeKey={currentOfflinePaneActiveKey}
               type="editable-card"
               onEdit={onEdit}
               className={offlineStyles.fileNameList}
-            >
-              {panes.map((pane: PaneItemType) => {
-                return (
-                  <TabPane
-                    tab={pane.title}
-                    key={pane.key}
-                    forceRender
-                    style={{ background: "#fff", width: "100%" }}
-                  >
-                    <TabPaneItem
-                      id={parseInt(pane.key)}
-                      node={pane.node}
-                      parentId={pane.parentId}
-                      currentOfflinePaneActiveKey={currentOfflinePaneActiveKey}
-                    />
-                  </TabPane>
-                );
-              })}
-            </Tabs>
+            />
             {getCurrentPane()[0].node.secondary == SecondaryEnums.dataMining ? (
               <Spin spinning={doGetNodeInfo.loading}>
                 <div className={offlineStyles.luckysheet}>

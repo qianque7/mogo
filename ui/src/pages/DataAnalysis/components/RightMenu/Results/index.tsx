@@ -197,7 +197,7 @@ const VersionHistory = (props: {
       })}
       placement="right"
       onClose={onClose}
-      visible={visible}
+      open={visible}
       width={"50vw"}
       style={{ transform: "none" }}
     >

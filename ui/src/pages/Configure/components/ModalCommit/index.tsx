@@ -66,7 +66,7 @@ const ModalCommit = () => {
     <CustomModal
       title={i18n.formatMessage({ id: "config.commit.title" })}
       width={"90vw"}
-      visible={visibleCommit}
+      open={visibleCommit}
       footer={
         <Button
           loading={doUpdatedConfiguration.loading}

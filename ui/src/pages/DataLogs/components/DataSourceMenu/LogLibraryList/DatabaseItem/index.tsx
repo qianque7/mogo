@@ -2,7 +2,7 @@ import deletedModal from "@/components/DeletedModal";
 import IconFont from "@/components/IconFont";
 import logLibraryListStyles from "@/pages/DataLogs/components/DataSourceMenu/LogLibraryList/index.less";
 import { PlusSquareOutlined } from "@ant-design/icons";
-import { Dropdown, Menu, message, Tooltip } from "antd";
+import { Dropdown, message, Tooltip } from "antd";
 import { useIntl, useModel } from "umi";
 
 const DatabaseItem = (props: { databasesItem: any; onGetList: any }) => {
@@ -93,8 +93,6 @@ const DatabaseItem = (props: { databasesItem: any; onGetList: any }) => {
     },
   ];
 
-  const menu = <Menu items={items} />;
-
   const tooltipTitle = (
     <div>
       <div className={logLibraryListStyles.logTipTitle}>
@@ -132,7 +130,7 @@ const DatabaseItem = (props: { databasesItem: any; onGetList: any }) => {
   );
 
   return (
-    <Dropdown overlay={menu} trigger={["contextMenu"]}>
+    <Dropdown menu={{ items: items }} trigger={["contextMenu"]}>
       <Tooltip
         title={tooltipTitle}
         placement="right"

@@ -150,7 +150,7 @@ const ModalCreatedLogLibrary = (props: { onGetList: any }) => {
       title={i18n.formatMessage({ id: "datasource.logLibrary.search.created" })}
       width={900}
       bodyStyle={{ overflowY: "scroll", maxHeight: "80vh" }}
-      visible={logLibraryCreatedModalVisible}
+      open={logLibraryCreatedModalVisible}
       onCancel={() => onChangeLogLibraryCreatedModalVisible(false)}
       confirmLoading={
         doCreatedLogLibraryAsString.loading ||

@@ -1,24 +1,18 @@
-import mangeIndexModalStyles
-    from "@/pages/DataLogs/components/QueryResult/Content/RawLog/RawLogsIndexes/ManageIndexModal/index.less";
+import mangeIndexModalStyles from "@/pages/DataLogs/components/QueryResult/Content/RawLog/RawLogsIndexes/ManageIndexModal/index.less";
 import CustomModal from "@/components/CustomModal";
-import {useModel} from "@@/plugin-model/useModel";
-import {Button, Form, FormInstance, Spin} from "antd";
-import {useEffect, useMemo, useRef, useState} from "react";
-import {SaveOutlined} from "@ant-design/icons";
-import TableHeader
-    from "@/pages/DataLogs/components/QueryResult/Content/RawLog/RawLogsIndexes/ManageIndexModal/TableHeader";
-import TableBody
-    from "@/pages/DataLogs/components/QueryResult/Content/RawLog/RawLogsIndexes/ManageIndexModal/TableBody";
-import TableFooter
-    from "@/pages/DataLogs/components/QueryResult/Content/RawLog/RawLogsIndexes/ManageIndexModal/TableFooter";
-import {useDebounceFn} from "ahooks";
-import {DEBOUNCE_WAIT} from "@/config/config";
-import {useIntl} from "umi";
-import {
-    FieldType
-} from "@/pages/DataLogs/components/QueryResult/Content/RawLog/RawLogsIndexes/ManageIndexModal/TableBody/IndexItem";
-import {IndexInfoType} from "@/services/dataLogs";
-import {PaneType} from "@/models/datalogs/types";
+import { useModel } from "@@/plugin-model/useModel";
+import { Button, Form, FormInstance, Spin } from "antd";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { SaveOutlined } from "@ant-design/icons";
+import TableHeader from "@/pages/DataLogs/components/QueryResult/Content/RawLog/RawLogsIndexes/ManageIndexModal/TableHeader";
+import TableBody from "@/pages/DataLogs/components/QueryResult/Content/RawLog/RawLogsIndexes/ManageIndexModal/TableBody";
+import TableFooter from "@/pages/DataLogs/components/QueryResult/Content/RawLog/RawLogsIndexes/ManageIndexModal/TableFooter";
+import { useDebounceFn } from "ahooks";
+import { DEBOUNCE_WAIT } from "@/config/config";
+import { useIntl } from "umi";
+import { FieldType } from "@/pages/DataLogs/components/QueryResult/Content/RawLog/RawLogsIndexes/ManageIndexModal/TableBody/IndexItem";
+import { IndexInfoType } from "@/services/dataLogs";
+import { PaneType } from "@/models/datalogs/types";
 
 const ManageIndexModal = () => {
   const {
@@ -131,7 +125,7 @@ const ManageIndexModal = () => {
     <CustomModal
       onCancel={cancel}
       title={i18n.formatMessage({ id: "log.index.manage.desc" })}
-      visible={visibleIndexModal}
+      open={visibleIndexModal}
       width={"70vw"}
       footer={
         <Button

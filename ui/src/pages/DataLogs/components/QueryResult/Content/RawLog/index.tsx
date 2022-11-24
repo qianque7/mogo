@@ -7,7 +7,7 @@ import RawLogs from "@/pages/DataLogs/components/QueryResult/Content/RawLog/RawL
 import { useModel } from "@@/plugin-model/useModel";
 import { useIntl } from "umi";
 import ManageIndexModal from "@/pages/DataLogs/components/QueryResult/Content/RawLog/RawLogsIndexes/ManageIndexModal";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo } from "react";
 
 const RawLogContent = (props: { tid: string }) => {
   const { tid } = props;
@@ -18,7 +18,6 @@ const RawLogContent = (props: { tid: string }) => {
     isHiddenHighChart,
     logPanesHelper,
     lastLoadingTid,
-    doGetAnalysisField,
   } = useModel("dataLogs");
   const { logPanes } = logPanesHelper;
 
@@ -36,9 +35,7 @@ const RawLogContent = (props: { tid: string }) => {
         {oldPane?.histogramChecked && (
           <Spin
             spinning={
-              lastLoadingTid == parseInt(tid)
-                ? highChartLoading || doGetAnalysisField.loading
-                : false
+              lastLoadingTid == parseInt(tid) ? highChartLoading : false
             }
             tip={i18n.formatMessage({ id: "spin" })}
             wrapperClassName={classNames(
@@ -52,11 +49,7 @@ const RawLogContent = (props: { tid: string }) => {
           </Spin>
         )}
         <Spin
-          spinning={
-            lastLoadingTid == parseInt(tid)
-              ? logsLoading || doGetAnalysisField.loading
-              : false
-          }
+          spinning={lastLoadingTid == parseInt(tid) ? logsLoading : false}
           tip={i18n.formatMessage({ id: "spin" })}
           wrapperClassName={classNames(
             queryResultStyles.querySpinning,

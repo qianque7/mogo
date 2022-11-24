@@ -33,7 +33,7 @@ const ModalCreatedConfigMap = () => {
 
   return (
     <CustomModal
-      visible={visibleCreatedConfigMap}
+      open={visibleCreatedConfigMap}
       title={i18n.formatMessage(
         { id: "config.createdConfigMap.title" },
         {

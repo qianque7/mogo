@@ -42,7 +42,7 @@ const CreateLogFilter = ({ tables }: { tables: any[] }) => {
   return (
     <Modal
       title="Add filter"
-      visible={visibleLogFilter}
+      open={visibleLogFilter}
       onOk={() => formFilterRef.current?.submit()}
       onCancel={() => onChangeVisibleLogFilter(false)}
       width={800}

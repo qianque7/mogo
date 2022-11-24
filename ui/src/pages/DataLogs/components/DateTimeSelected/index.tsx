@@ -80,8 +80,8 @@ const DarkTimeSelect = () => {
         placement="bottomRight"
         content={<DateTimeSelectedCard onChangeVisble={setVisibleTime} />}
         trigger="click"
-        visible={visibleTime}
-        onVisibleChange={setVisibleTime}
+        open={visibleTime}
+        onOpenChange={setVisibleTime}
       >
         <Button className={darkTimeStyles.darkTimeBtn}>
           <span>

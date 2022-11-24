@@ -77,7 +77,7 @@ const UpdateChannelModal = ({ loadList }: UpdateChannelProps) => {
   return (
     <Modal
       title={i18n.formatMessage({ id: "alarm.notify.modal.updated" })}
-      visible={visibleUpdate}
+      open={visibleUpdate}
       width={700}
       onCancel={onCancel}
       onOk={() => formRef.current?.submit()}

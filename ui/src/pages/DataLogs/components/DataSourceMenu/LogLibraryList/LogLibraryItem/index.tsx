@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import logLibraryListStyles from "@/pages/DataLogs/components/DataSourceMenu/LogLibraryList/index.less";
-import { Dropdown, Menu, message, Tooltip } from "antd";
+import { Dropdown, message, Tooltip } from "antd";
 import {
   ApartmentOutlined,
   CalendarOutlined,
@@ -334,8 +334,6 @@ const LogLibraryItem = (props: LogLibraryItemProps) => {
     logLibrary.createType,
   ]);
 
-  const menu = useMemo(() => <Menu items={items} />, [items]);
-
   const tooltipTitle = useMemo(
     () => (
       <div>
@@ -389,7 +387,7 @@ const LogLibraryItem = (props: LogLibraryItemProps) => {
       className={classNames(logLibraryListStyles.tableTitle)}
       style={{ width: `${resizeMenuWidth - 80}px` }}
     >
-      <Dropdown overlay={menu} trigger={["contextMenu"]}>
+      <Dropdown menu={{ items: items }} trigger={["contextMenu"]}>
         <Tooltip
           title={tooltipTitle}
           placement="right"

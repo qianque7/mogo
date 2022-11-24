@@ -46,7 +46,7 @@ const creatCollectingHistorical = (props: {
   return (
     <Modal
       title={i18n.formatMessage({ id: "log.collectHistory.modal.title" })}
-      visible={visible}
+      open={visible}
       onCancel={() => onChangeVisible(false)}
       onOk={() => collectingHistoricalRef.current?.submit()}
       width={800}

@@ -8,9 +8,7 @@ import useTimeOptions from "@/pages/DataLogs/hooks/useTimeOptions";
 import useUrlState from "@ahooksjs/use-url-state";
 import { RestUrlStates } from "@/pages/DataLogs/hooks/useLogUrlParams";
 import useLocalStorages, { LocalModuleType } from "@/hooks/useLocalStorages";
-import { useEffect } from "react";
-
-const { TabPane } = Tabs;
+import { useEffect, useMemo } from "react";
 
 const RawLogTabs = () => {
   const [_, setUrlState] = useUrlState();
@@ -77,6 +75,27 @@ const RawLogTabs = () => {
     };
   }, []);
 
+  const items = useMemo(() => {
+    let arr: any[] = [];
+    paneKeys.map((item) => {
+      const pane = logPanes[item];
+      if (pane) {
+        arr.push({
+          label: pane.pane,
+          key: pane.paneId,
+          forceRender: true,
+          children:
+            pane.paneId === currentLogLibrary?.id.toString() ? (
+              <QueryResult tid={pane.paneId} />
+            ) : (
+              <></>
+            ),
+        });
+      }
+    });
+    return arr;
+  }, [paneKeys, logPanes, currentLogLibrary?.id]);
+
   // TODO: Tabs性能待优化
   return (
     <div className={rawLogTabsStyles.rawLogTabsMain}>
@@ -91,20 +110,8 @@ const RawLogTabs = () => {
           destroyInactiveTabPane
           animated={false}
           style={{ width: `calc(100vw - ${83 + resizeMenuWidth}px)` }}
-        >
-          {paneKeys.map((item) => {
-            const pane = logPanes[item];
-            return (
-              pane && (
-                <TabPane key={pane.paneId} tab={pane.pane} forceRender>
-                  {pane.paneId === currentLogLibrary?.id.toString() ? (
-                    <QueryResult tid={pane.paneId} />
-                  ) : null}
-                </TabPane>
-              )
-            );
-          })}
-        </Tabs>
+          items={items}
+        />
       ) : (
         <Empty
           style={{ flex: 1 }}
