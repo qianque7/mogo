@@ -2,7 +2,7 @@ import notificationStyles from "@/pages/Alarm/Notifications/styles/index.less";
 import classNames from "classnames";
 import Operations from "@/pages/Alarm/Notifications/components/Operations";
 import NotificationsTable from "@/pages/Alarm/Notifications/components/NotificationsTable";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { useEffect, useState } from "react";
 import { ChannelType } from "@/services/alarm";
 import CreateChannelModal from "@/pages/Alarm/Notifications/components/CreateChannelModal";

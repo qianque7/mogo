@@ -9,7 +9,7 @@ import { useCallback, useEffect, useMemo, useRef } from "react";
 import { ItemType } from "antd/es/menu/hooks/useItems";
 import { AppstoreAddOutlined, EditOutlined } from "@ant-design/icons";
 import IconFont from "@/components/IconFont";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { useIntl } from "umi";
 import deletedModal from "@/components/DeletedModal";
 import lodash from "lodash";

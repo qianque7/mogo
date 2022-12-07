@@ -1,7 +1,7 @@
 import rawLogsStyles from "@/pages/DataLogs/components/QueryResult/Content/RawLog/RawLogs/index.less";
 import RawLogsOperations from "@/pages/DataLogs/components/QueryResult/Content/RawLog/RawLogsOperations";
 import RawLogList from "@/pages/DataLogs/components/QueryResult/Content/RawLog/RawLogList";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { Empty } from "antd";
 import { useIntl } from "umi";
 import { useMemo } from "react";

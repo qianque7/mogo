@@ -10,7 +10,7 @@ import {
   Table,
 } from "antd";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import moment from "moment";
 import { FIRST_PAGE, MINUTES_UNIT_TIME, PAGE_SIZE } from "@/config/config";
 import useRequest from "@/hooks/useRequest/useRequest";

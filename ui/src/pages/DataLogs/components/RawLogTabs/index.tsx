@@ -1,7 +1,7 @@
 import rawLogTabsStyles from "@/pages/DataLogs/components/RawLogTabs/index.less";
 import { Empty, Tabs } from "antd";
 import QueryResult from "@/pages/DataLogs/components/QueryResult";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import lodash from "lodash";
 import { useIntl } from "umi";
 import useTimeOptions from "@/pages/DataLogs/hooks/useTimeOptions";

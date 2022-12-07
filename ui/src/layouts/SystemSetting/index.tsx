@@ -1,11 +1,11 @@
-import systemSettingStyles from '@/layouts/SystemSetting/styles/index.less';
-import type { ReactNode } from 'react';
+import systemSettingStyles from "@/layouts/SystemSetting/styles/index.less";
+import { Outlet } from "umi";
 
-type SystemSettingProps = {
-  children: ReactNode;
-};
-const SystemSetting = (props: SystemSettingProps) => {
-  const { children } = props;
-  return <div className={systemSettingStyles.systemSettingMain}>{children}</div>;
+const SystemSetting = () => {
+  return (
+    <div className={systemSettingStyles.systemSettingMain}>
+      <Outlet />
+    </div>
+  );
 };
 export default SystemSetting;

@@ -1,6 +1,6 @@
 import CustomModal from "@/components/CustomModal";
 import { Button, Form, FormInstance, Input } from "antd";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { MonacoDiffEditor } from "react-monaco-editor";
 import { useEffect, useRef } from "react";
 import { useDebounceFn } from "ahooks";

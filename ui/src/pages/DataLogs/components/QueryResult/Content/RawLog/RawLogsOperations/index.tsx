@@ -1,6 +1,6 @@
 import rawLogsOperationsStyles from "@/pages/DataLogs/components/QueryResult/Content/RawLog/RawLogsOperations/index.less";
 import { Pagination } from "antd";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { useIntl } from "umi";
 import { FIRST_PAGE } from "@/config/config";
 import { PaneType } from "@/models/datalogs/types";

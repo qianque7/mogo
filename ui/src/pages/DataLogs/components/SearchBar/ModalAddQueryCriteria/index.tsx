@@ -1,7 +1,7 @@
 import CustomModal from "@/components/CustomModal";
-import { AutoComplete, Button, Form, FormInstance, Select } from "antd";
+import { Button, Form, FormInstance, Select } from "antd";
 import { useEffect, useRef } from "react";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { useIntl } from "umi";
 
 const { Option } = Select;
@@ -93,9 +93,9 @@ const ModalAddQueryCriteria = (props: ModalAddQueryCriteriaProps) => {
                 label={"value"}
                 rules={[{ required: true }]}
               >
-                <AutoComplete
+                {/* <AutoComplete
                   disabled={flag}
-                  style={{ width: "100%" }}
+                  // style={{ width: "100%" }}
                   allowClear
                   options={[]}
                   placeholder={`${i18n.formatMessage({
@@ -106,7 +106,7 @@ const ModalAddQueryCriteria = (props: ModalAddQueryCriteriaProps) => {
                       .toUpperCase()
                       .indexOf(inputValue.toUpperCase()) !== -1
                   }
-                />
+                /> */}
               </Form.Item>
             );
           }}

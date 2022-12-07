@@ -3,7 +3,7 @@ import classNames from "classnames";
 import { Button } from "antd";
 import { PlusOutlined } from "@ant-design/icons";
 import { useIntl } from "umi";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 const Operations = () => {
   const i18n = useIntl();
   const { alarmChannelModal } = useModel("alarm");

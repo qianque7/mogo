@@ -1,4 +1,4 @@
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { useEffect, useState } from "react";
 import { AlarmHistoryRequest, AlarmHistoryType } from "@/services/alarm";
 import HistoryTable from "@/pages/Alarm/Rules/components/AlarmHistory/HistoryTable";

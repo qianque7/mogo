@@ -1,7 +1,7 @@
 import indexHeaderStyles from "@/pages/DataLogs/components/QueryResult/Content/RawLog/RawLogsIndexes/IndexHeader/index.less";
 import IconFont from "@/components/IconFont";
 import { Button, Space, Tooltip } from "antd";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { useIntl } from "umi";
 import { QuestionCircleOutlined } from "@ant-design/icons";
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Form, Input, Modal, Select } from "antd";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { ItemInfo } from "@/models/pms";
 import { useIntl } from "umi";
 

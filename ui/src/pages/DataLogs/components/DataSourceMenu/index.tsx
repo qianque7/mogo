@@ -1,7 +1,7 @@
 import dataSourceMenuStyles from "@/pages/DataLogs/components/DataSourceMenu/index.less";
 import LoggingLibrary from "@/pages/DataLogs/components/DataSourceMenu/LoggingLibrary";
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import classNames from "classnames";
 import ResizeWidth from "@/pages/DataLogs/components/DataSourceMenu/ResizeWidth";
 import LogLibraryItem from "./LogLibraryList/LogLibraryItem";

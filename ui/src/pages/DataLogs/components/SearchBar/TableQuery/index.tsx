@@ -2,7 +2,7 @@ import { Button, Tooltip } from "antd";
 import searchBarStyles from "@/pages/DataLogs/components/SearchBar/index.less";
 import IconFont from "@/components/IconFont";
 import { useIntl } from "umi";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useDebounce, useDebounceFn } from "ahooks";
 import { DEBOUNCE_WAIT } from "@/config/config";

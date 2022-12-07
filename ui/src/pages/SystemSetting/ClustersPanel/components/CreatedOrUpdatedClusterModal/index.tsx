@@ -4,7 +4,7 @@ import type { FormInstance } from "antd";
 import { Button, Form, Input, Select } from "antd";
 import { useEffect, useRef } from "react";
 import { useDebounceFn } from "ahooks";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import type { ClusterType } from "@/services/systemSetting";
 import { DEBOUNCE_WAIT } from "@/config/config";
 import { useIntl } from "umi";

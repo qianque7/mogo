@@ -1,6 +1,6 @@
 import rawLogListStyles from "@/pages/DataLogs/components/QueryResult/Content/RawLog/RawLogList/index.less";
 import LogItem from "@/pages/DataLogs/components/QueryResult/Content/RawLog/RawLogList/LogItem";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import classNames from "classnames";
 import { PaneType } from "@/models/datalogs/types";
 import LinkItem from "./LinkItem";

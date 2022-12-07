@@ -1,4 +1,4 @@
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import CustomModal from "@/components/CustomModal";
 import { Spin } from "antd";
 import { MonacoDiffEditor } from "react-monaco-editor";

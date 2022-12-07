@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import eventStyles from "@/pages/SystemSetting/Events/index.less";
 import EventList from "@/pages/SystemSetting/Events/EventList";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { useEffect, useState } from "react";
 import Operations from "@/pages/SystemSetting/Events/Operations";
 import useUrlState from "@ahooksjs/use-url-state";

@@ -2,7 +2,7 @@ import historyStyles from "@/pages/Alarm/Rules/components/AlarmHistory/index.les
 import { Table } from "antd";
 import { ColumnsType } from "antd/es/table";
 import moment from "moment";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { AlarmHistoryRequest, AlarmHistoryType } from "@/services/alarm";
 import { useIntl } from "umi";
 

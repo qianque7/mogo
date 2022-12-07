@@ -4,7 +4,7 @@ import RolesList from "./components/RolesList";
 import React, { useEffect } from "react";
 import { FormInstance } from "antd/es/form";
 import RoleModel from "./components/RoleModel";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import useRequestX from "@/hooks/useRequest/useRequest";
 import { reqUpdatePmsGrant } from "@/services/pms";
 import { useIntl } from "umi";

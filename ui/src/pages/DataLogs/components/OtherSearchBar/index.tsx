@@ -1,7 +1,7 @@
 import { Button } from "antd";
 import IconFont from "@/components/IconFont";
 import { PaneType } from "@/models/datalogs/types";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { useEffect, useMemo } from "react";
 import { QueryTypeEnum } from "@/config/config";
 import searchBarStyles from "@/pages/DataLogs/components/SearchBar/index.less";

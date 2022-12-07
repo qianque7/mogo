@@ -3,7 +3,7 @@ import { useEffect, useRef } from "react";
 import ChannelFormItems, {
   ChannelFormType,
 } from "@/pages/Alarm/Notifications/components/ChannelFormItems";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { useIntl } from "umi";
 import IconFont from "@/components/IconFont";
 import { SaveOutlined } from "@ant-design/icons";

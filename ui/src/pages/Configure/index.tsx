@@ -2,7 +2,7 @@ import configsStyles from "@/pages/Configure/styles/index.less";
 import MenuBar from "@/pages/Configure/components/MenuBar";
 import Menu from "@/pages/Configure/components/Menu";
 import Editor from "@/pages/Configure/components/Editor";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { useEffect } from "react";
 import SelectedBar from "@/pages/Configure/components/SelectedBar";
 import ModalCreatedConfig from "@/pages/Configure/components/ModalCreatedConfig";

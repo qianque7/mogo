@@ -3,7 +3,7 @@ import { Button, Form, FormInstance, Input, Select } from "antd";
 import { useIntl } from "umi";
 import { useEffect, useRef, useState } from "react";
 import CustomModal from "@/components/CustomModal";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { SaveOutlined } from "@ant-design/icons";
 import { useDebounceFn } from "ahooks";
 import { DEBOUNCE_WAIT } from "@/config/config";

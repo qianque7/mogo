@@ -2,7 +2,7 @@ import alarmStyles from "@/pages/Alarm/Rules/styles/index.less";
 import { Divider, message, Space, Table, Tooltip } from "antd";
 import { ColumnsType } from "antd/es/table";
 import { useIntl } from "umi";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { useEffect } from "react";
 import { AlarmsResponse, AlarmType } from "@/services/alarm";
 import IconFont from "@/components/IconFont";

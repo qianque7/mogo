@@ -18,7 +18,7 @@ import {
   // reqGrantRootUids,
 } from "@/services/pms";
 import useRequest from "@/hooks/useRequest/useRequest";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import {
   ClearOutlined,
   DeleteOutlined,

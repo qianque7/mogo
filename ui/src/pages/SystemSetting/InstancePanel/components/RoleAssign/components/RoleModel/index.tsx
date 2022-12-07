@@ -1,5 +1,5 @@
 import { Button, Form, Input, Modal, Select } from "antd";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { useEffect } from "react";
 import DetailList from "./detailList";
 import { useIntl } from "umi";

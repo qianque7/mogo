@@ -1,7 +1,7 @@
 import { useCallback, useMemo } from "react";
 import logItemStyles from "@/pages/DataLogs/components/QueryResult/Content/RawLog/RawLogList/LogItem/index.less";
 import { Tag, Tooltip } from "antd";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import ClickMenu from "@/pages/DataLogs/components/QueryResult/Content/RawLog/ClickMenu";
 import LogItemDetail from "@/pages/DataLogs/utils/LogItemDetail";
 

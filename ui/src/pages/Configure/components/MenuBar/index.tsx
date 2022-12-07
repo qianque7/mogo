@@ -1,7 +1,7 @@
 import configsStyles from "@/pages/Configure/styles/index.less";
 import { FileOutlined, CloudServerOutlined } from "@ant-design/icons";
 import classNames from "classnames";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { Tooltip } from "antd";
 import { useIntl } from "umi";
 

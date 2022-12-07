@@ -2,7 +2,7 @@ import dataLogsStyles from "@/pages/DataLogs/styles/index.less";
 import DataSourceMenu from "@/pages/DataLogs/components/DataSourceMenu";
 import classNames from "classnames";
 import { useEffect } from "react";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import RawLogTabs from "@/pages/DataLogs/components/RawLogTabs";
 import useLogUrlParams from "@/pages/DataLogs/hooks/useLogUrlParams";
 import CollapseMenu from "@/pages/DataLogs/components/CollapseAndExpandMenu/CollapseMenu";

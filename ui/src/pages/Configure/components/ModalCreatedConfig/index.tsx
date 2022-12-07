@@ -1,7 +1,7 @@
 import CustomModal from "@/components/CustomModal";
 import { Button, Form, FormInstance, Input, Radio } from "antd";
 import { useEffect, useRef } from "react";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { useIntl } from "umi";
 import { SaveOutlined } from "@ant-design/icons";
 

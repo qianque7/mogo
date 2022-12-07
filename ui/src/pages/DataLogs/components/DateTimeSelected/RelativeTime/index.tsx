@@ -1,5 +1,5 @@
 import darkTimeStyles from "@/pages/DataLogs/components/DateTimeSelected/index.less";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import moment from "moment";
 import { currentTimeStamp, timeStampFormat } from "@/utils/momentUtils";
 import { useContext, useMemo, useState } from "react";

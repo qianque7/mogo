@@ -1,6 +1,6 @@
 import { Avatar, Divider, List } from "antd";
 import { useEffect } from "react";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import InfiniteScroll from "react-infinite-scroll-component";
 import eventStyles from "@/pages/SystemSetting/Events/index.less";
 import styles from "@/components/RightContent/index.less";

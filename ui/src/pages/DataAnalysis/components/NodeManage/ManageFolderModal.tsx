@@ -1,6 +1,6 @@
 import { Form, FormInstance, Input, Modal } from "antd";
 import { useEffect, useRef } from "react";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 export interface ManageFolderModalType {
   // // visibleFolder: any;
   // isEditNode: any;

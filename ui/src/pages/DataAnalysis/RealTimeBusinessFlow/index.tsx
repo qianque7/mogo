@@ -1,8 +1,8 @@
-import { BusinessEChart } from "@/pages/DataAnalysis/RealTimeBusinessFlow/components/BusinessChart";
+import BusinessEChart from "@/pages/DataAnalysis/RealTimeBusinessFlow/components/BusinessChart/BusinessChart";
 import LibraryTree from "@/pages/DataAnalysis/RealTimeBusinessFlow/components/LibraryTree";
 import TrafficStyles from "@/pages/DataAnalysis/RealTimeBusinessFlow/index.less";
+import { useModel } from "@@/plugin-model";
 import { useEffect, useState } from "react";
-import { useModel } from "@@/plugin-model/useModel";
 
 const RealTimeTrafficFlow = () => {
   const [utime, setUtime] = useState<number>();
@@ -27,7 +27,7 @@ const RealTimeTrafficFlow = () => {
   return (
     <div className={TrafficStyles.realTimeTrafficMain}>
       <LibraryTree setUtime={setUtime} />
-      <BusinessEChart utime={utime} />
+      <BusinessEChart utime={utime!} />
     </div>
   );
 };

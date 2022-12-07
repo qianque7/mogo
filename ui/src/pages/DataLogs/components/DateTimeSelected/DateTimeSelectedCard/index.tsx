@@ -2,7 +2,7 @@ import darkTimeStyles from "@/pages/DataLogs/components/DateTimeSelected/index.l
 import { Tabs } from "antd";
 import CustomTimeInterval from "@/pages/DataLogs/components/DateTimeSelected/CustomTimeInterval";
 import RelativeTime from "@/pages/DataLogs/components/DateTimeSelected/RelativeTime";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { TimeRangeType } from "@/config/config";
 import { DarkTimeContext } from "@/pages/DataLogs/components/DateTimeSelected";
 import { useContext, useMemo } from "react";

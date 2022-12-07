@@ -2,7 +2,7 @@ import eventStyles from "@/pages/SystemSetting/Events/index.less";
 import { Button, Form, FormInstance, Select, Space } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import useRequest from "@/hooks/useRequest/useRequest";
 import { getSourceOptions } from "@/services/events";
 import { useIntl } from "umi";

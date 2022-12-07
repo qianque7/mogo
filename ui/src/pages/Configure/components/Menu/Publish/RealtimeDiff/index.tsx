@@ -1,7 +1,7 @@
 import { Button, Spin } from "antd";
 import { useEffect } from "react";
 import { MonacoDiffEditor } from "react-monaco-editor";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import CustomModal from "@/components/CustomModal";
 import diffStyles from "@/pages/Configure/components/Menu/Publish/RealtimeDiff/index.less";
 import { useIntl } from "umi";

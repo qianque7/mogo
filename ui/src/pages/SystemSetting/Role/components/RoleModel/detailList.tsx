@@ -1,5 +1,5 @@
 import { Button, Form, Select } from "antd";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { MinusCircleOutlined, PlusOutlined } from "@ant-design/icons";
 import styles from "./index.less";
 import { useIntl } from "umi";

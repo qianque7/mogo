@@ -1,7 +1,7 @@
 import indexItemStyles from "@/pages/DataLogs/components/QueryResult/Content/RawLog/RawLogsIndexes/IndexItem/index.less";
 import classNames from "classnames";
 import { useEffect, useState } from "react";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { Progress, Spin, Tooltip } from "antd";
 import useRequest from "@/hooks/useRequest/useRequest";
 import api, { IndexDetail, IndexInfoType } from "@/services/dataLogs";

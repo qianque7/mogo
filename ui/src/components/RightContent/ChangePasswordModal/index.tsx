@@ -1,7 +1,7 @@
 import { Form, FormInstance, Input, message, Modal } from "antd";
 import { useEffect, useRef } from "react";
 import { useIntl } from "umi";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { EyeInvisibleOutlined, EyeTwoTone } from "@ant-design/icons";
 import { useDebounceFn } from "ahooks";
 import { DEBOUNCE_WAIT } from "@/config/config";

@@ -3,7 +3,7 @@ import classNames from "classnames";
 import { Button, Modal } from "antd";
 import IconFont from "@/components/IconFont";
 import { useIntl } from "umi";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { useDebounceFn } from "ahooks";
 import { DEBOUNCE_WAIT, LOGIN_PATH } from "@/config/config";
 import { history } from "umi";

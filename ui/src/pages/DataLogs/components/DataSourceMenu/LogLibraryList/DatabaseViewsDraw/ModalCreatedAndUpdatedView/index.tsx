@@ -3,7 +3,7 @@ import { Button, Form, FormInstance, Input, Select, Switch } from "antd";
 import { SaveOutlined } from "@ant-design/icons";
 import { useIntl } from "umi";
 import { useEffect, useRef } from "react";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { useDebounceFn } from "ahooks";
 import { cloneDeep } from "lodash";
 import { CreatedViewRequest, TablesResponse } from "@/services/dataLogs";

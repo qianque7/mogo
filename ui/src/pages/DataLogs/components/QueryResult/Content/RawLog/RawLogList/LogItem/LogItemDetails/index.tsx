@@ -1,6 +1,6 @@
 import logItemStyles from "@/pages/DataLogs/components/QueryResult/Content/RawLog/RawLogList/LogItem/index.less";
 import { useMemo } from "react";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import classNames from "classnames";
 import { parseJsonObject } from "@/utils/string";
 import lodash from "lodash";

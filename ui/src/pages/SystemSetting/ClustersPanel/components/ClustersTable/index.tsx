@@ -1,6 +1,6 @@
 import clusterPanelStyles from "@/pages/SystemSetting/ClustersPanel/index.less";
 import { Divider, Space, Table, Tooltip } from "antd";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { useContext } from "react";
 import type { AlignType, FixedType } from "rc-table/lib/interface";
 import { EditOutlined } from "@ant-design/icons";

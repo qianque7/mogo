@@ -12,7 +12,7 @@ import TreeNodeTypeIcon, {
 import NodeTreeItem from "@/pages/DataAnalysis/OfflineManager/components/WorkflowTree/NodeTreeItem";
 import CustomTree, { NodeType } from "@/components/CustomTree";
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import useRightMenu from "@/pages/DataAnalysis/OfflineManager/components/WorkflowTree/RightMenu";
 import lodash, { cloneDeep } from "lodash";
 

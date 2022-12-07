@@ -51,7 +51,7 @@ const ExportExcelButton = ({
     if (data.length > 0) {
       showModal();
     } else {
-      message.warn(i18n.formatMessage({ id: "noData" }));
+      message.warning(i18n.formatMessage({ id: "noData" }));
     }
   };
   return (

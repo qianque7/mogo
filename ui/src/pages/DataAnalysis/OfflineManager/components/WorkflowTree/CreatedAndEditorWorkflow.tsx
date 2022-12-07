@@ -1,7 +1,7 @@
 import { Form, Modal, Input } from "antd";
 import { useCallback, useEffect, useRef } from "react";
 import { FormInstance } from "antd/es/form";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { useDebounceFn } from "ahooks";
 import { DEBOUNCE_WAIT } from "@/config/config";
 import { useIntl } from "umi";

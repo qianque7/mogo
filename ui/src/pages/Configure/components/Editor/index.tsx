@@ -1,6 +1,6 @@
 import editorStyles from "@/pages/Configure/components/Editor/index.less";
 import MonacoEditor from "react-monaco-editor";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { Empty, Modal, Spin } from "antd";
 import OptionButton, {
   ButtonType,

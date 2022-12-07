@@ -1,6 +1,6 @@
 import TrafficStyles from "@/pages/DataAnalysis/RealTimeBusinessFlow/index.less";
 import { Button, Form, Select } from "antd";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { useEffect } from "react";
 import { useDebounceFn } from "ahooks";
 import { useIntl } from "umi";

@@ -7,7 +7,7 @@ import classNames from "classnames";
 import { InstancePanelContext } from "@/pages/SystemSetting/InstancePanel";
 import { useContext, useState } from "react";
 import deletedModal from "@/components/DeletedModal";
-import { useModel } from "@@/plugin-model/useModel";
+// import { useModel } from "@@/plugin-model";
 import type { InstanceType } from "@/services/systemSetting";
 import TooltipRender from "@/utils/tooltipUtils/TooltipRender";
 import { useIntl } from "umi";

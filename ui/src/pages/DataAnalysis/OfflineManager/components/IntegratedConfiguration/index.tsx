@@ -4,7 +4,7 @@ import FileTitle, {
 import IntegratedConfigs from "@/pages/DataAnalysis/OfflineManager/components/IntegratedConfiguration/IntegratedConfigs";
 import { Form, Spin } from "antd";
 import { useEffect, useMemo, useState } from "react";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { DataSourceTypeEnums } from "@/pages/DataAnalysis/OfflineManager/config";
 import message from "antd/es/message";
 import { BigDataSourceType } from "@/services/bigDataWorkflow";

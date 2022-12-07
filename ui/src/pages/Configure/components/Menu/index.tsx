@@ -1,4 +1,4 @@
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import Files from "@/pages/Configure/components/Menu/Files";
 import Publish from "@/pages/Configure/components/Menu/Publish";
 

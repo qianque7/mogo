@@ -1,6 +1,6 @@
 import CustomModal from "@/components/CustomModal";
 import { Button, Form, FormInstance, Input } from "antd";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { useRef } from "react";
 import { useDebounceFn } from "ahooks";
 import { DEBOUNCE_WAIT } from "@/config/config";

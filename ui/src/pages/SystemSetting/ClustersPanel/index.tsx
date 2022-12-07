@@ -4,7 +4,7 @@ import { createContext, useEffect, useState } from "react";
 import ClustersTable from "@/pages/SystemSetting/ClustersPanel/components/ClustersTable";
 import CreatedOrUpdatedClusterModal from "@/pages/SystemSetting/ClustersPanel/components/CreatedOrUpdatedClusterModal";
 import type { ClusterType } from "@/services/systemSetting";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 type ClustersPanelContextType = {
   onChangeVisible?: (flag: boolean) => void;
   onChangeIsEditor?: (flag: boolean) => void;

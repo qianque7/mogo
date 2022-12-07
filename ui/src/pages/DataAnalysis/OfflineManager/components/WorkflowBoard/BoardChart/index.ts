@@ -1,11 +1,12 @@
-import { dynamic } from "umi";
+// // import { dynamic } from "umi";
 
-export const BoardChart = dynamic({
-  loader: async function () {
-    // 这里的注释 webpackChunkName 可以指导 webpack 将该组件 HugeA 以这个名字单独拆出去
-    const { default: BoardChart } = await import(
-      /* webpackChunkName: "echarts-realTime-traffic" */ "./Board"
-    );
-    return BoardChart;
-  },
-});
+// // './Page' 该组件将被自动拆出去
+
+// export const BoardChart = async () => {
+//   // const BoardChart = lazy(() => import("./Board"));
+//   const { default: BoardChart } = await import(
+//     /* webpackChunkName: "echarts-realTime-traffic" */ "./Board"
+//   );
+//   console.log(BoardChart, "BoardChart", import("./Board"));
+//   return BoardChart;
+// };

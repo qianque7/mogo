@@ -2,7 +2,7 @@ import highChartsStyles from "@/pages/DataLogs/components/QueryResult/Content/Ra
 import { Chart, Tooltip, Interval, Interaction } from "bizcharts";
 import { Empty } from "antd";
 import classNames from "classnames";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { useMemo, useRef, useState } from "react";
 import HighChartsTooltip from "@/pages/DataLogs/components/QueryResult/Content/RawLog/HighCharts/HighChartsTooltip";
 import moment from "moment";

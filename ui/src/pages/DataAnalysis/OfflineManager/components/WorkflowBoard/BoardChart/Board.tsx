@@ -1,3 +1,4 @@
+import { graphlib, layout } from "dagre";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import ReactFlow, {
   addEdge,
@@ -8,16 +9,15 @@ import ReactFlow, {
   Position,
   ReactFlowProvider,
 } from "react-flow-renderer";
-import { graphlib, layout } from "dagre";
 
 import "./styles/index.less";
-// import { useModel } from "@@/plugin-model/useModel";
+// import { useModel } from "@@/plugin-model";
+import deletedModal from "@/components/DeletedModal";
 import BoardNode from "@/pages/DataAnalysis/OfflineManager/components/WorkflowBoard/BoardChart/BoardNode";
 import {
   FlowNodeTypeEnums,
   TertiaryEnums,
 } from "@/pages/DataAnalysis/service/enums";
-import deletedModal from "@/components/DeletedModal";
 import { useKeyPress } from "ahooks";
 import { useModel } from "umi";
 // import { Spin } from "antd";
@@ -42,8 +42,8 @@ export interface BoardProps {
   changeEdges: any;
   boardEdges: any;
   // setIsBoardCreateNode: any;
-  setIsEditNode: any;
-  setCurrentNode: any;
+  // setIsEditNode: any;
+  // setCurrentNode: any;
 
   // showNodeModal: any;
   // hideNodeModal: any;
@@ -75,10 +75,10 @@ const Board = ({
   deleteEdges,
   changeEdges,
   boardEdges,
-  // setIsBoardCreateNode,
-  setIsEditNode,
-  setCurrentNode,
-}: // showNodeModal,
+}: // setIsBoardCreateNode,
+// setIsEditNode,
+// setCurrentNode,
+// showNodeModal,
 // hideNodeModal,
 // showFolderModal,
 // hideFolderModal,

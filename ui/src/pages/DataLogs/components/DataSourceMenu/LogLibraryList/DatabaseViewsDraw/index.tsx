@@ -3,7 +3,7 @@ import { Button, Divider, Drawer, Space, Table, Tooltip } from "antd";
 import classNames from "classnames";
 import { EditOutlined, PlusOutlined } from "@ant-design/icons";
 import { useIntl } from "umi";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { useEffect } from "react";
 import ModalCreatedAndUpdatedView from "@/pages/DataLogs/components/DataSourceMenu/LogLibraryList/DatabaseViewsDraw/ModalCreatedAndUpdatedView";
 import deletedModal from "@/components/DeletedModal";

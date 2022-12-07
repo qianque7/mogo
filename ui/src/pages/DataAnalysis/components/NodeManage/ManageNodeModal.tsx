@@ -1,6 +1,6 @@
 import { Form, FormInstance, Input, Modal, Select } from "antd";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { TertiaryList } from "@/models/dataanalysis/useManageNodeAndFolder";
 import { TertiaryEnums } from "@/pages/DataAnalysis/service/enums";
 import { DataSourceTypeEnums } from "@/pages/DataAnalysis/OfflineManager/config";

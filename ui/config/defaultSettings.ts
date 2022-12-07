@@ -1,6 +1,4 @@
-import { Settings as LayoutSettings } from "@ant-design/pro-layout";
-
-const Settings: LayoutSettings & {
+const Settings: any & {
   pwa?: boolean;
   logo?: string;
 } = {

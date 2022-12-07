@@ -1,7 +1,7 @@
 import offlineStyles from "@/pages/DataAnalysis/OfflineManager/index.less";
 import { RightOutlined } from "@ant-design/icons";
 import classNames from "classnames";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { useEffect, useRef } from "react";
 import { Dropdown } from "antd";
 import useRightMenu from "@/pages/DataAnalysis/OfflineManager/components/WorkflowTree/RightMenu";

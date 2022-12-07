@@ -1,6 +1,6 @@
 import CustomModal from "@/components/CustomModal";
 import { MonacoDiffEditor } from "react-monaco-editor";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { useEffect } from "react";
 import { useIntl } from "umi";
 

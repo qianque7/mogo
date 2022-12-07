@@ -2,7 +2,7 @@ import logsIndexStyles from "@/pages/DataLogs/components/QueryResult/Content/Raw
 import classNames from "classnames";
 import IndexHeader from "@/pages/DataLogs/components/QueryResult/Content/RawLog/RawLogsIndexes/IndexHeader";
 import IndexList from "@/pages/DataLogs/components/QueryResult/Content/RawLog/RawLogsIndexes/IndexList";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { useEffect } from "react";
 import { PaneType } from "@/models/datalogs/types";
 

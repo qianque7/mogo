@@ -1,5 +1,5 @@
 import { Dropdown, Tooltip } from "antd";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { useEffect, useMemo, useState } from "react";
 import { TertiaryEnums } from "@/pages/DataAnalysis/service/enums";
 import SVGIcon, { SVGTypeEnums } from "@/components/SVGIcon";

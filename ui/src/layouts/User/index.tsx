@@ -1,19 +1,15 @@
 import userStyles from "@/layouts/User/styles/index.less";
 import UserCardHeader from "@/layouts/User/UserCardHeader";
-import React from "react";
+import { Outlet } from "umi";
 import { SelectLang } from "umi";
 
-type UserProps = {
-  children: React.ReactNode;
-};
-
-const LoginLayout = ({ children }: UserProps) => {
+const LoginLayout = () => {
   return (
     <div className={userStyles.userMain}>
       <div className={userStyles.userCard}>
         <UserCardHeader />
         <div className={userStyles.divider} />
-        {children}
+        <Outlet />
       </div>
       <SelectLang className={userStyles.lang} reload={false} />
     </div>

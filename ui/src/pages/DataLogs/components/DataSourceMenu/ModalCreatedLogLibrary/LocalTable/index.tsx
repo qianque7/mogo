@@ -10,7 +10,7 @@ import {
   Collapse,
   Input,
 } from "antd";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { InstanceType } from "@/services/systemSetting";
 import { LocalTables } from "@/services/dataLogs";
 import { useState } from "react";

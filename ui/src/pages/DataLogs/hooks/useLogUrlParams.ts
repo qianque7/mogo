@@ -1,5 +1,5 @@
 import useUrlState from "@ahooksjs/use-url-state";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { useDebounceFn } from "ahooks";
 import {
   ACTIVE_TIME_INDEX,

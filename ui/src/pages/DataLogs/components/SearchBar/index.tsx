@@ -2,7 +2,7 @@ import searchBarStyles from "@/pages/DataLogs/components/SearchBar/index.less";
 import { QueryTypeEnum } from "@/config/config";
 import TableQuery from "@/pages/DataLogs/components/SearchBar/TableQuery";
 import RawLogQuery from "@/pages/DataLogs/components/SearchBar/RawLogQuery";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { useMemo } from "react";
 
 const SearchBar = () => {

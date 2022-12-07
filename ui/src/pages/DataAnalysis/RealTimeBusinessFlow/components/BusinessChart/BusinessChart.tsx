@@ -12,7 +12,7 @@ import ReactFlow, {
 import { graphlib, layout } from "dagre";
 
 import "./styles/index.less";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import NodeContent from "@/pages/DataAnalysis/RealTimeBusinessFlow/components/BusinessChart/NodeContent";
 import moment from "moment";
 import { useIntl } from "umi";

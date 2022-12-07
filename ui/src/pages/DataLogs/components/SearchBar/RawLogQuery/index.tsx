@@ -4,7 +4,7 @@ import SearchBarSuffixIcon from "@/pages/DataLogs/components/SearchBar/SearchBar
 import { PaneType, QueryParams } from "@/models/datalogs/types";
 import DarkTimeSelect from "@/pages/DataLogs/components/DateTimeSelected";
 import IconFont from "@/components/IconFont";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { useIntl } from "umi";
 import { useDebounceFn } from "ahooks";
 import { FIRST_PAGE, TimeRangeType } from "@/config/config";

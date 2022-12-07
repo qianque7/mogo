@@ -1,5 +1,5 @@
 import queryResultStyles from "@/pages/DataLogs/components/QueryResult/index.less";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import Luckysheet from "./Luckysheet/inex";
 import { useMemo, useRef } from "react";
 import { ColumnsType } from "antd/es/table";

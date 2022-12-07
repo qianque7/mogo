@@ -1,7 +1,7 @@
 import historyStyles from "@/pages/Alarm/Rules/components/AlarmHistory/index.less";
 import moment from "moment";
 import { Button, DatePicker, Space } from "antd";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { AlarmHistoryRequest } from "@/services/alarm";
 import { useIntl } from "umi";
 

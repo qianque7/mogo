@@ -1,10 +1,5 @@
 import RightContent from "@/components/RightContent";
 import Footer from "@/components/Footer";
-import type {
-  BasicLayoutProps,
-  MenuDataItem,
-  ProSettings,
-} from "@ant-design/pro-layout";
 import defaultSettings from "../config/defaultSettings";
 import { AccountMenus } from "@/services/menu";
 import React from "react";
@@ -15,8 +10,8 @@ import { AVOID_CLOSE_ROUTING, LOGIN_PATH } from "@/config/config";
 import { history, IRoute } from "umi";
 
 export interface InitialStateType {
-  settings: ProSettings;
-  menus: MenuDataItem[];
+  settings: any;
+  menus: any[];
   currentUser?: API.CurrentUser;
 }
 const LoginPath = [
@@ -43,23 +38,25 @@ const fetchMenu = async () => {
 };
 
 // 登录情况下添加重定向路由
-export async function patchRoutes({ routes }: { routes: IRoute[] }) {
-  if (LoginPath.includes(document.location.pathname)) {
-    return routeList;
-  }
-  await fetchMenu();
-  let pagesRoutes: IRoute[] = routes[0].routes || [];
-  if (routeList[0]) {
-    pagesRoutes?.unshift({
-      path: "/",
-      exact: true,
-      redirect: routeList[0]?.children
-        ? routeList[0]?.children[0].path
-        : routeList[0]?.path,
-    });
-  }
-  return;
-}
+// export async function patchClientRoutes({ routes }: any) {
+//   if (LoginPath.includes(document.location.pathname)) {
+//     return routeList;
+//   }
+//   await fetchMenu();
+//   console.log(routes, "pagesRoutes");
+//   return;
+//   let pagesRoutes: any[] = routes[0].routes || [];
+//   if (routeList[0]) {
+//     pagesRoutes?.unshift({
+//       path: "/",
+//       exact: true,
+//       redirect: routeList[0]?.children
+//         ? routeList[0]?.children[0].path
+//         : routeList[0]?.path,
+//     });
+//   }
+//   return;
+// }
 
 export async function getInitialState(): Promise<InitialStateType | undefined> {
   const pathname = history.location.pathname;
@@ -91,7 +88,7 @@ export const layout = ({
   initialState,
 }: {
   initialState: InitialStateType;
-}): BasicLayoutProps => {
+}): any => {
   const { menus, settings, currentUser } = initialState;
   return {
     menuDataRender: () => menus,

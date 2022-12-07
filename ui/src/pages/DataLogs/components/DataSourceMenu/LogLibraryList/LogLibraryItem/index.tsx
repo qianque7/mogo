@@ -20,7 +20,7 @@ import {
   MINUTES_UNIT_TIME,
   PAGE_SIZE,
 } from "@/config/config";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { useIntl } from "umi";
 import lodash from "lodash";
 import moment from "moment";

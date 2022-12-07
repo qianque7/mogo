@@ -2,7 +2,7 @@ import { PmsRole } from "@/services/pms";
 import styles from "./index.less";
 import { message, Tooltip } from "antd";
 import { EditFilled, QuestionCircleOutlined } from "@ant-design/icons";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { useIntl } from "umi";
 import { useState } from "react";
 

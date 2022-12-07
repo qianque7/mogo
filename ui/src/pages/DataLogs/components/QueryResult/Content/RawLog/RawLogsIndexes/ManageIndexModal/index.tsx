@@ -1,6 +1,6 @@
 import mangeIndexModalStyles from "@/pages/DataLogs/components/QueryResult/Content/RawLog/RawLogsIndexes/ManageIndexModal/index.less";
 import CustomModal from "@/components/CustomModal";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { Button, Form, FormInstance, Spin } from "antd";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { SaveOutlined } from "@ant-design/icons";

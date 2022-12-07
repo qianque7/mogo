@@ -1,5 +1,5 @@
 import WorkflowSql from "@/pages/DataAnalysis/components/SQLEditor";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Empty, message } from "antd";
 import {

@@ -1,16 +1,16 @@
+import IconFont from "@/components/IconFont";
+import ChangePasswordModal from "@/components/RightContent/ChangePasswordModal";
+import { useModel } from "umi";
 import {
   FileTextOutlined,
   LogoutOutlined,
   UpCircleOutlined,
 } from "@ant-design/icons";
 import { Avatar, Spin } from "antd";
+import { useMemo } from "react";
+import { useIntl } from "umi";
 import HeaderDropdown from "../HeaderDropdown";
 import styles from "./index.less";
-import { useModel } from "@@/plugin-model/useModel";
-import { useIntl } from "umi";
-import IconFont from "@/components/IconFont";
-import ChangePasswordModal from "@/components/RightContent/ChangePasswordModal";
-import { useMemo } from "react";
 
 const AvatarDropdown = () => {
   const { currentUser } = useModel("@@initialState").initialState || {};

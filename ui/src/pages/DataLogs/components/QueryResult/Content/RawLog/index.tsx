@@ -4,7 +4,7 @@ import { Spin } from "antd";
 import classNames from "classnames";
 import HighCharts from "@/pages/DataLogs/components/QueryResult/Content/RawLog/HighCharts";
 import RawLogs from "@/pages/DataLogs/components/QueryResult/Content/RawLog/RawLogs";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { useIntl } from "umi";
 import ManageIndexModal from "@/pages/DataLogs/components/QueryResult/Content/RawLog/RawLogsIndexes/ManageIndexModal";
 import { useMemo } from "react";

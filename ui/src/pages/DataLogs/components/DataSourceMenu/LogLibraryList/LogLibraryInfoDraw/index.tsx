@@ -1,7 +1,7 @@
 import infoStyles from "@/pages/DataLogs/components/DataSourceMenu/LogLibraryList/LogLibraryInfoDraw/index.less";
 import { TableInfoResponse, TablesResponse } from "@/services/dataLogs";
 import { useEffect, useState } from "react";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { Drawer, Select, Tooltip } from "antd";
 import MonacoEditor from "react-monaco-editor";
 import { useIntl } from "umi";

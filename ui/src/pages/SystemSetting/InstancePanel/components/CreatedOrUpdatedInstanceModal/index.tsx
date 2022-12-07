@@ -13,7 +13,7 @@ import {
 } from "antd";
 import { useDebounceFn } from "ahooks";
 import type { InstanceType } from "@/services/systemSetting";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { useEffect, useRef, useState } from "react";
 import { DEBOUNCE_WAIT } from "@/config/config";
 import { useIntl } from "umi";

@@ -3,7 +3,7 @@ import { CaretDownFilled } from "@ant-design/icons";
 import darkTimeStyles from "@/pages/DataLogs/components/DateTimeSelected/index.less";
 import React, { useEffect, useRef, useState } from "react";
 import DateTimeSelectedCard from "@/pages/DataLogs/components/DateTimeSelected/DateTimeSelectedCard";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { timeStampFormat } from "@/utils/momentUtils";
 import { ACTIVE_TIME_NOT_INDEX, TimeRangeType } from "@/config/config";
 import { useIntl } from "umi";

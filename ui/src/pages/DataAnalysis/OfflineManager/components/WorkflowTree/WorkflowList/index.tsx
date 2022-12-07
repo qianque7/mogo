@@ -1,5 +1,5 @@
 import offlineStyles from "@/pages/DataAnalysis/OfflineManager/index.less";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { useMemo } from "react";
 import WorkflowLine from "@/pages/DataAnalysis/OfflineManager/components/WorkflowTree/WorkflowList/WorkflowLine";
 

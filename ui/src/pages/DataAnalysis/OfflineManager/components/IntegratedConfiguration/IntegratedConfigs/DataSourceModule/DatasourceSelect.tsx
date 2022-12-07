@@ -16,7 +16,7 @@ import {
   FormItemEnums,
   TypeOptions,
 } from "@/pages/DataAnalysis/OfflineManager/config";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import Request from "umi-request";
 import { OpenTypeEnums } from "@/models/dataanalysis/useIntegratedConfigs";
 import { ClusterMode } from "@/models/clusters";

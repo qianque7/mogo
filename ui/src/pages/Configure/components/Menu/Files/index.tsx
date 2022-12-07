@@ -14,7 +14,7 @@ import TextButton from "@/pages/Configure/components/CustomButton/TextButton";
 import IconFont from "@/components/IconFont";
 import ActionButton from "@/pages/Configure/components/CustomButton/ActionButton";
 import classNames from "classnames";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import deletedModal from "@/components/DeletedModal";
 import OnlineDiff from "@/pages/Configure/components/Menu/Files/OnlineDiff";
 import { useState } from "react";

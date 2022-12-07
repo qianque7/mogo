@@ -1,6 +1,6 @@
 import queryResultStyles from "@/pages/DataLogs/components/QueryResult/index.less";
 import SearchBar from "@/pages/DataLogs/components/SearchBar";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import classNames from "classnames";
 import OtherSearchBar from "@/pages/DataLogs/components/OtherSearchBar";
 import { useEffect, useMemo } from "react";

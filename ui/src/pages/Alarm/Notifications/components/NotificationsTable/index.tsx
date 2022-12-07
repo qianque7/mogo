@@ -6,7 +6,7 @@ import { ChannelType } from "@/services/alarm";
 import { useIntl } from "umi";
 import IconFont from "@/components/IconFont";
 import { EditOutlined } from "@ant-design/icons";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import deletedModal from "@/components/DeletedModal";
 
 type NotificationProps = {

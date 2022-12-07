@@ -2,7 +2,7 @@ import { useIntl } from "umi";
 import logItemStyles from "@/pages/DataLogs/components/QueryResult/Content/RawLog/RawLogList/LogItem/index.less";
 import { Tooltip } from "antd";
 import IconFont from "@/components/IconFont";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 
 interface CopyLogProps {
   log: any;

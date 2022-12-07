@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import dataLogsStyles from "@/pages/DataLogs/styles/index.less";
 import { CaretLeftOutlined, CaretRightOutlined } from "@ant-design/icons";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { useDebounceFn } from "ahooks";
 
 const CollapseMenu = () => {

@@ -1,6 +1,6 @@
 import loginContextStyles from "@/pages/User/Login/Context/index.less";
 import { Button, Form, Input } from "antd";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import CryptoJs from "crypto-js";
 import { useIntl } from "umi";
 

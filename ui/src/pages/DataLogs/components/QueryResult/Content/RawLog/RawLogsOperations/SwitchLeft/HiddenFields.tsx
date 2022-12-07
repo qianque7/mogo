@@ -1,5 +1,5 @@
 import CustomModal from "@/components/CustomModal";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { EyeInvisibleOutlined } from "@ant-design/icons";
 import { useDebounceFn } from "ahooks";
 import { Button, Table, Tooltip } from "antd";

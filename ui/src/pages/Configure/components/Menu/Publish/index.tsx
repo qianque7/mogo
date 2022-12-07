@@ -1,6 +1,6 @@
 import publishStyles from "./style.less";
 import { Form, Modal, Select, Tag } from "antd";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import moment from "moment";
 import { useEffect, useState } from "react";
 

@@ -1,6 +1,6 @@
 import infoStyles from "@/pages/Alarm/Rules/components/AlarmInfoDraw/index.less";
 import { Drawer, Empty, message, Select, Tabs, Tooltip } from "antd";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { useEffect, useMemo, useState } from "react";
 import { useIntl } from "umi";
 import useTimeUnits from "@/hooks/useTimeUnits";

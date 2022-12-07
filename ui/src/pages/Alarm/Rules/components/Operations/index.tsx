@@ -1,6 +1,6 @@
 import alarmStyles from "@/pages/Alarm/Rules/styles/index.less";
 import { Button, Input, Select, Space, Tooltip } from "antd";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { useEffect } from "react";
 import { useIntl } from "umi";
 import { PlusOutlined, RedoOutlined, SearchOutlined } from "@ant-design/icons";

@@ -1,6 +1,6 @@
 import logLibraryListStyles from "@/pages/DataLogs/components/DataSourceMenu/LogLibraryList/index.less";
 import { Button, Empty, Tree } from "antd";
-import { useModel } from "@@/plugin-model/useModel";
+import { useModel } from "@@/plugin-model";
 import { useIntl } from "umi";
 import DatabaseViewsDraw from "@/pages/DataLogs/components/DataSourceMenu/LogLibraryList/DatabaseViewsDraw";
 import AssociatLogLibraries from "@/pages/DataLogs/components/DataSourceMenu/LogLibraryList/AssociatLogLibraries";
