@@ -100,7 +100,7 @@ export default {
         `api/v1/bigdata/mining/${source}/${id}/databases`,
       {
         method: "GET",
-        cancelToken,
+        // cancelToken,
         skipErrorHandler: true,
       }
     );
@@ -115,7 +115,8 @@ export default {
   ) {
     return request(
       process.env.PUBLIC_PATH + `api/v1/bigdata/mining/${source}/${id}/tables`,
-      { method: "GET", params, cancelToken, skipErrorHandler: true }
+      // { method: "GET", params, cancelToken, skipErrorHandler: true }
+      { method: "GET", params, skipErrorHandler: true }
     );
   },
   async getSourceColumns(
@@ -126,7 +127,8 @@ export default {
   ) {
     return request(
       process.env.PUBLIC_PATH + `api/v1/bigdata/mining/${source}/${id}/columns`,
-      { method: "GET", params, cancelToken, skipErrorHandler: true }
+      // { method: "GET", params, cancelToken, skipErrorHandler: true }
+      { method: "GET", params, skipErrorHandler: true }
     );
   },
 

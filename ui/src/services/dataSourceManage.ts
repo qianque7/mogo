@@ -28,7 +28,7 @@ export default {
     return request<any>(process.env.PUBLIC_PATH + `api/v1/bigdata/sources`, {
       method: "GET",
       params,
-      cancelToken,
+      // cancelToken,
       skipErrorHandler: true,
     });
   },

@@ -267,7 +267,7 @@ export default {
     return request<API.Res<HighChartsResponse>>(
       process.env.PUBLIC_PATH + `api/v1/tables/${tableId}/charts`,
       {
-        cancelToken,
+        // cancelToken,
         method: "GET",
         params,
         skipErrorHandler: true,

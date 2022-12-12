@@ -1,11 +1,11 @@
-import { SearchOutlined } from '@ant-design/icons';
-import { AutoComplete, Input } from 'antd';
-import useMergedState from 'rc-util/es/hooks/useMergedState';
-import type { AutoCompleteProps } from 'antd/es/auto-complete';
-import React, { useRef } from 'react';
+import { SearchOutlined } from "@ant-design/icons";
+import { AutoComplete, Input } from "antd";
+import useMergedState from "rc-util/es/hooks/useMergedState";
+import type { AutoCompleteProps } from "antd/es/auto-complete";
+import React, { useRef } from "react";
 
-import classNames from 'classnames';
-import styles from './index.less';
+import classNames from "classnames";
+import styles from "./index.less";
 
 export type HeaderSearchProps = {
   onSearch?: (value?: string) => void;
@@ -13,7 +13,7 @@ export type HeaderSearchProps = {
   onVisibleChange?: (b: boolean) => void;
   className?: string;
   placeholder?: string;
-  options: AutoCompleteProps['options'];
+  options: AutoCompleteProps["options"];
   defaultVisible?: boolean;
   visible?: boolean;
   defaultValue?: string;
@@ -56,7 +56,7 @@ const HeaderSearch: React.FC<HeaderSearchProps> = (props) => {
         }
       }}
       onTransitionEnd={({ propertyName }) => {
-        if (propertyName === 'width' && !searchMode) {
+        if (propertyName === "width" && !searchMode) {
           if (onVisibleChange) {
             onVisibleChange(searchMode);
           }
@@ -66,7 +66,7 @@ const HeaderSearch: React.FC<HeaderSearchProps> = (props) => {
       <SearchOutlined
         key="Icon"
         style={{
-          cursor: 'pointer',
+          cursor: "pointer",
         }}
       />
       <AutoComplete
@@ -74,7 +74,7 @@ const HeaderSearch: React.FC<HeaderSearchProps> = (props) => {
         className={inputClass}
         value={value}
         options={restProps.options}
-        onChange={setValue}
+        onChange={(val: string) => setValue(val)}
       >
         <Input
           size="small"
@@ -83,7 +83,7 @@ const HeaderSearch: React.FC<HeaderSearchProps> = (props) => {
           aria-label={placeholder}
           placeholder={placeholder}
           onKeyDown={(e) => {
-            if (e.key === 'Enter') {
+            if (e.key === "Enter") {
               if (restProps.onSearch) {
                 restProps.onSearch(value);
               }

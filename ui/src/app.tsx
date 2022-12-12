@@ -38,25 +38,25 @@ const fetchMenu = async () => {
 };
 
 // 登录情况下添加重定向路由
-// export async function patchClientRoutes({ routes }: any) {
-//   if (LoginPath.includes(document.location.pathname)) {
-//     return routeList;
-//   }
-//   await fetchMenu();
-//   console.log(routes, "pagesRoutes");
-//   return;
-//   let pagesRoutes: any[] = routes[0].routes || [];
-//   if (routeList[0]) {
-//     pagesRoutes?.unshift({
-//       path: "/",
-//       exact: true,
-//       redirect: routeList[0]?.children
-//         ? routeList[0]?.children[0].path
-//         : routeList[0]?.path,
-//     });
-//   }
-//   return;
-// }
+export async function patchClientRoutes({ routes }: any) {
+  if (LoginPath.includes(document.location.pathname)) {
+    return routeList;
+  }
+  await fetchMenu();
+  console.log(routes, "pagesRoutes");
+  return;
+  let pagesRoutes: any[] = routes[0].routes || [];
+  if (routeList[0]) {
+    pagesRoutes?.unshift({
+      path: "/",
+      exact: true,
+      redirect: routeList[0]?.children
+        ? routeList[0]?.children[0].path
+        : routeList[0]?.path,
+    });
+  }
+  return;
+}
 
 export async function getInitialState(): Promise<InitialStateType | undefined> {
   const pathname = history.location.pathname;
